@@ -1,0 +1,102 @@
+<style type="text/css">
+/*
+REM -------------------------------------------------------------------------
+REM Definicoes dos estilos:
+REM -------------------------------------------------------------------------
+*/
+BODY
+{
+  text-align: justify;
+  background: #FFFFFF;
+  color:white
+  font: 10pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+td
+{
+  font: Arial, Verdana, Helvetica, sans-serif;
+  color: white;
+}
+
+ul
+{
+  font: 10pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+H1, H2
+{
+  font: bold 18pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+H3, H4
+{
+  font: bold 12pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+.footer
+{
+  text-align: center;
+  font: 7pt Arial, Helvetica, sans-serif, Verdana;
+}
+
+TABLE.Menu
+{
+  color: white;
+  background: #FFFFFF
+  text-align: center;
+  font: bold 7pt Arial, Helvetica, sans-serif, Verdana;
+}
+
+TR
+{
+  font: 10pt Arial, Helvetica, sans-serif, Verdana;
+}
+
+SPAN
+{
+  font: 10pt Arial, Helvetica, sans-serif, Verdana;
+  font-weight: bold;
+  color:white
+}
+
+H5
+{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font: bold 15pt sans-serif, Helvetica, Verdana, Arial;
+}
+
+A.Menu
+{
+  color: #330099;
+  text-decoration: underline;
+  font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+A:visited
+{
+  color: white;
+  font-weight: normal;
+}
+
+A:Link
+{
+  color: white;
+  font-weight: normal;
+}
+
+A:Active
+{
+  color: white;
+  font-weight: normal;
+}
+
+A:Hover
+{
+  color: white;
+  font-weight: bold;
+}
+
+-->
+</style>

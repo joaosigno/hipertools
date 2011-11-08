@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Método Find</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_278.htm">previous</a> &nbsp; <a href="TH_280.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo Find</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Verifica se um determinado item existe e permite remov&#234;-lo.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Find </b><i>String</i>[, <i>Boolean</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.64167in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.64167in">Requerido. Sempre ter&#225; que ser um objeto Pack.</td>
+</tr>
+<tr>
+<td class=heading-2>String</td>
+</td>
+<td class=footer>Requerido. Chave ou &#237;ndice do item.</td>
+</tr>
+<tr>
+<td class=heading-2 style="width: 1.08333in">Boolean</td>
+</td>
+<td class=footer style="width: 3.64167in">Opcional. Especifica se o item deve ser removido. O padr&#227;o para essa propriedade &#233; <i>falso</i>, n&#227;o removendo o item.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso da propriedade <b>Find</b>.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Dim&nbsp;Pack</p>
+<p class=preformatted>Set&nbsp;Pack&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Pack")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Add&nbsp;"Table0",&nbsp;"Pedidos"</p>
+<p class=preformatted>Pack.Add&nbsp;"Table1",&nbsp;"IPedidos"</p>
+<p class=preformatted>Pack.Add&nbsp;"Table2",&nbsp;"Produtos"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>If&nbsp;Pack.Find("Table1")&nbsp;Then</p>
+<p class=preformatted>&nbsp;&nbsp;Pack("Table1")&nbsp;=&nbsp;"JPedidos"</p>
+<p class=preformatted>End&nbsp;If</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>If&nbsp;Pack.Find("Table2",&nbsp;True)&nbsp;Then</p>
+<p class=preformatted>&nbsp;&nbsp;&#8216;Item&nbsp;apagado</p>
+<p class=preformatted>&nbsp;&nbsp;Response.Write&nbsp;Pack.Count</p>
+<p class=preformatted>&nbsp;&nbsp;Retorna:&nbsp;2</p>
+<p class=preformatted>End&nbsp;If</p>
+<p class=preformatted>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Pack</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>PackItem.Position, PackItem.Key, Remove.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_280.htm"><img src="button.png" border=0></a><a href="TH_280.htm" style="text-decoration:none;">Método Remove</a></p>
+<p>
+</body>
+</html>

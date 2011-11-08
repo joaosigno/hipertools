@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Propriedade UserFilename</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_536.htm">previous</a> &nbsp; <a href="TH_538.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade UserFilename </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna o nome completo original do arquivo na m&#225;quina do usu&#225;rio que o enviou arquivo. Esta propriedade &#233; <i>read-only</i>.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>[<i>Result =</i>]<i> objeto</i>.<b>UserFilename</b></p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto UploadItem.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>UserFilename</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>' Mostra as informa&#231;&#245;es dos arquivos enviados</p>
+<p class=normal>Show.Message "&lt;H3&gt;Informa&#231;&#245;es dos arquivos&lt;/H3&gt;"</p>
+<p class=normal>For Index = 1 to Upload.FormCount</p>
+<p class=normal>  If (Upload.Form(Index).IsFile) Then</p>
+<p class=normal>    Show.Message Upload.Form(Index).Name &amp; "=" &amp; _</p>
+<p class=normal>                 Upload.Form(Index).<b>UserFilename</b> &amp; "=" &amp; _</p>
+<p class=normal>                 Upload.Form(Index).TotalBytes &amp; "=" &amp; _</p>
+<p class=normal>                 Upload.Form(Index).ServerName</p>
+<p class=normal>  End If</p>
+<p class=normal>Next</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>UploadItem.</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>IsFile, ServerName, TotalBytes, Value.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_538.htm"><img src="button.png" border=0></a><a href="TH_538.htm" style="text-decoration:none;">Propriedade TotalBytes</a></p>
+<p>
+</body>
+</html>

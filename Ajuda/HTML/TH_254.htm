@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Método Reset</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_253.htm">previous</a> &nbsp; <a href="TH_255.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo Reset</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Exibe um bot&#227;o que, ao ser clicado, redefine todos os campos do formul&#225;rio aos seus valores padr&#227;o.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Reset </b><i>String</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Form</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Valor do bot&#227;o. O valor ser&#225; apresentado como texto no bot&#227;o.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>Reset</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form.BeginForm Initializer.ScriptName, "frmEnviar", , ,"return ValidateField()"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Radio &#8220;Nome&#8221;, &#8220;Teste&#8221;, &#8220;Right&#8221;, 1</p>
+<p class=normal>Form.Radio &#8220;Nome2&#8221;, &#8220;Teste&#8221;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Submit "bmtEnvia", "Emitir"</p>
+<p class=normal>Form.<b>Reset </b>"Limpar"</p>
+<p class=normal>Retorna: &lt;INPUT TYPE=&#8221;RESET&#8221; VALUE=&#8221;Limpar&#8221;&gt;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_255.htm"><img src="button.png" border=0></a><a href="TH_255.htm" style="text-decoration:none;">Método SelectChooseOption</a></p>
+<p>
+</body>
+</html>

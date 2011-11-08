@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Propriedade Pack</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_283.htm">previous</a> &nbsp; <a href="TH_285.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Pack</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Retorna uma nova inst&#226;ncia do objeto Pack. Isso permite que cada item seja um outro objeto Pack, como uma lista encadeada.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3><i>objeto</i>.<b>Pack</b></p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>O argumento <i>objeto</i> sempre ser&#225; o objeto <i>PackItem</i>.<i></i></p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso da propriedade Pack.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Dim&nbsp;Pack</p>
+<p class=preformatted>Set&nbsp;Pack&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Pack")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Add&nbsp;"Table2",&nbsp;"Pedidos"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack("Table2").<b>Pack</b>.Add&nbsp;"Field0",&nbsp;"Codigo"</p>
+<p class=preformatted>Pack("Table2").<b>Pack</b>.Add&nbsp;"Field1",&nbsp;"Pedido"</p>
+<p class=preformatted>Pack("Table2").<b>Pack</b>.Add&nbsp;"Field2",&nbsp;"Data"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;Pack("Table2").<b>Pack</b>.Count</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;3</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;Pack("Table2").<b>Pack</b>("Field2")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;Data</p>
+<p class=preformatted>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>PackItem</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Pack</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_285.htm"><img src="button.png" border=0></a><a href="TH_285.htm" style="text-decoration:none;">Propriedade Position</a></p>
+<p>
+</body>
+</html>

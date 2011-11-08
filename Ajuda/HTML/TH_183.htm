@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Método AddField</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_182.htm">previous</a> &nbsp; <a href="TH_184.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo AddField</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define cada campo que ser&#225; utilizado para edi&#231;&#227;o dos dados. Poder&#225; se definir os mais diversos tipos de entradas e valida&#231;&#245;es, relacionamentos (lookups), valores padr&#227;o para inclus&#227;o, listas de valores f&#237;xos, m&#225;scaras de apresenta&#231;&#227;o. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>AddField </b><i>String1</i>, <i>String2</i>, [<i>Integer1</i>], [<i>Integer2</i>], [<i>Integer3</i>], [<i>String3</i>], [<i>String4</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome da coluna ou tabela.coluna que ser&#225; utilizada para edi&#231;&#227;o.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. Texto ou r&#243;tulo que ser&#225; apresentado para identificar o campo durante a edi&#231;&#227;o. Utilize o &#8220;&amp;&#8221; para utilizar os atalhos usando <i>ALT</i>+<i>Letra</i> &#8211; AccessKey.  Ex.: &#8220;&amp;r&#243;tulo&#8221; utilize alt+r.</td>
+</tr>
+<tr>
+<td class=normal><i>Integer1</i></td>
+<td class=normal>Opcional. Tipo do campo que ser&#225; utilizado. O padr&#227;o &#233; efFldTypeText. Utilize as constantes efFldType*.</td>
+</tr>
+<tr>
+<td class=normal><i>Integer2</i></td>
+<td class=normal>Opcional. Tipo de valida&#231;&#227;o para o campo utilizado. O padr&#227;o efValOptNone. Utilize as constantes efValOpt&#133;</td>
+</tr>
+<tr>
+<td class=normal><i>Integer3</i></td>
+<td class=normal>Opcional. Op&#231;&#227;o de apresenta&#231;&#227;o. O padr&#227;o &#233; zero (0).</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=normal>Opcional. Valor padr&#227;o para este campo durante a inclus&#227;o. </td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String4</i></td>
+<td class=normal style="width: 3.41667in">Opcional. Texto da mensagem que ser&#225; apresentada quando o campo estiver vazio.</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>AddField</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.BeginForm&nbsp;"sncChamaTecnico",&nbsp;"Chamado&nbsp;T&#233;cnico",&nbsp;1,&nbsp;sparEditWhat,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;efValLocClient</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormUnit&nbsp;"chtSolicitante|chtSetor,chtDataSolicita,chtHoraSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormTabs&nbsp;"Solicitante|Setor"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormList&nbsp;"chtSolicitante,chtSetor,chtDataSolicita&#8221;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormFind&nbsp;"chtSolicitante,chtSetor,chtDataSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSetor,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Setor",&nbsp;conListSetor</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSolicitante,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Usu&#225;rio",&nbsp;conListUsuario</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>AddField</b>&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"&amp;C&#243;digo",&nbsp;&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;efNext</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>AddField</b>&nbsp;"chtSolicitante",&nbsp;&nbsp;"&amp;Solicitante"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>AddField</b>&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"S&amp;etor"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>AddField</b>&nbsp;"chtDataSolicita",&nbsp;"&amp;Data",&nbsp;efFldTypeText,&nbsp;efValOptDate,&nbsp;,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;String.LongDate(Now)</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>AddField&nbsp;</b>"chtHoraSolicita",&nbsp;"&amp;Hor&#225;rio",&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;String.LeadingZeroes(Hour(Now),&nbsp;2)&nbsp;&amp;&nbsp;":"&nbsp;&amp;&nbsp;&nbsp;String.LeadingZeroes(Minute(Now),&nbsp;2)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldInternalLink&nbsp;"chtSolicitante",&nbsp;sparEditWhat,&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.EndForm</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>DataAddField, BeginForm, EndForm, FormUnit, FormList, FormFind, &#8220;Constantes Field Types&#8221;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_184.htm"><img src="button.png" border=0></a><a href="TH_184.htm" style="text-decoration:none;">Método AddOrder</a></p>
+<p>
+</body>
+</html>

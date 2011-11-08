@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Propriedade JSStarted</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_561.htm">previous</a> &nbsp; <a href="TH_563.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade JSStarted </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna ou define o estado do objeto de valida&#231;&#227;o. Se j&#225; foi iniciada uma <i>TAG</i> <i>SCRIPT</i></p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>JSStarted</b> [= <i>Boolean</i> ] </p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.64167in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.64167in">Requerido. Sempre ser&#225; um objeto Validate.</td>
+</tr>
+</table>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>JSStarted</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Dim&nbsp;Validate</p>
+<p class=preformatted>Set&nbsp;Validate&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Validate")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>If&nbsp;Not&nbsp;Validate.<b>JSStarted</b>&nbsp;Then</p>
+<p class=preformatted>&nbsp;&nbsp;Validate.BeginJS</p>
+<p class=preformatted>End&nbsp;If</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"function&nbsp;fazAlgo(){"</p>
+<p class=preformatted>Response.Write&nbsp;"&nbsp;&nbsp;if(true){"</p>
+<p class=preformatted>Response.Write&nbsp;"&nbsp;&nbsp;&nbsp;&nbsp;..."</p>
+<p class=preformatted>Response.Write&nbsp;"&nbsp;&nbsp;}"</p>
+<p class=preformatted>Response.Write&nbsp;"}"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Validate.EndJS&nbsp;'Aqui&nbsp;<b>JSStarted</b>&nbsp;volta&nbsp;a&nbsp;ser&nbsp;False</p>
+<p class=preformatted>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Validate</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>BeginJS, EndJS, BeginJava, EndJava</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_563.htm"><img src="button.png" border=0></a><a href="TH_563.htm" style="text-decoration:none;">Método BeginJava</a></p>
+<p>
+</body>
+</html>

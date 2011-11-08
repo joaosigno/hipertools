@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Propriedade parWhat</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_150.htm">previous</a> &nbsp; <a href="TH_152.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade parWhat</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Para desenvolver com o EditForm deve-se modularizar todos as defini&#231;&#245;es de dados &#8211; DataAddField, DataTable &#8211; e de apresenta&#231;&#227;o de formul&#225;rios &#8211; BeginForm, AddField &#8211; em m&#243;dulos e deve-se controlar qual m&#243;dulo executar com constantes para cada m&#243;dulo; veja o exemplo &#8211; conChamaTecnico. De acordo com o que foi definido nos m&#243;dulos, no exemplo  GetChamaTecnico, o m&#233;todo ShowActions ou IsMyAction apresentar&#225; o que for adequado &#8211; ver parAction.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>parWhat</b></p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>parWhat</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Edit.OpenConnection</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Select Case Edit.parWhat</p>
+<p class=normal>Case conChamaTecnico</p>
+<p class=normal>  GetChamaTecnico</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Case Else</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Select</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>parAction, ShowActions, IsMyAction, RedirectActions, DataAddField, DataTable, AddField, BeginForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_152.htm"><img src="button.png" border=0></a><a href="TH_152.htm" style="text-decoration:none;">Propriedade parAction</a></p>
+<p>
+</body>
+</html>

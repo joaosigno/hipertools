@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Propriedade MaxBytes</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_525.htm">previous</a> &nbsp; <a href="TH_527.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade MaxBytes </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Espec&#237;fica qual ser&#225; o n&#250;mero total de bytes que os arquivos enviados poder&#227;o ter, n&#227;o permitindo que sejam gravados com tamanho superior ao especificado.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>MaxBytes</b> [<i>= Integer</i>] </p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto <i>Upload</i>. </p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Caso o valor dessa propriedade seja diferente de zero, este valor ser&#225; utilizado para restringir a grava&#231;&#227;o.</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>MaxBytes</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Dim Upload</p>
+<p class=normal>Set Upload = Server.CreateObject("HiperTools30.Upload")</p>
+<p class=normal>Upload.<b>MaxBytes = </b>15360</p>
+<p class=normal>Upload.OverwriteFiles<b> = </b>True</p>
+<p class=normal>Upload.Path <b>= </b>"c:\inertpub\wwwroot\XYZ\upload"</p>
+<p class=normal>Upload.SaveAs File.ExtractFileName(Upload.ServerName)</p>
+<p class=normal>Set Upload = Nothing</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Upload</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Save, SaveAs.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_527.htm"><img src="button.png" border=0></a><a href="TH_527.htm" style="text-decoration:none;">Propriedade OverwriteFiles</a></p>
+<p>
+</body>
+</html>

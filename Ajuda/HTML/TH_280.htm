@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Método Remove</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_279.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo Remove</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Remove um item do Pack.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Remove </b><i>String</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.64167in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.64167in">Requerido. Sempre ter&#225; que ser um objeto Pack.</td>
+</tr>
+<tr>
+<td class=heading-2 style="width: 1.08333in">String</td>
+</td>
+<td class=footer style="width: 3.64167in">Requerido. &#205;ndice ou chave do item a ser removido.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>Remove</b>.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Dim&nbsp;Pack</p>
+<p class=preformatted>Set&nbsp;Pack&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Pack")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Add&nbsp;"Table0",&nbsp;"Pedidos"</p>
+<p class=preformatted>Pack.Add&nbsp;"Table1",&nbsp;"IPedidos"</p>
+<p class=preformatted>Pack.Add&nbsp;"Table2",&nbsp;"Produtos"</p>
+<p class=preformatted>Response.Write&nbsp;Pack.Count</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;3</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Remove("Table1")</p>
+<p class=preformatted>Pack.Remove("Table2")</p>
+<p class=preformatted>Response.Write&nbsp;Pack.Count</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;1</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Pack</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>PackItem.Key, PackItem.Position, Add, Find</p>
+<p>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Método AddReport</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_186.htm">previous</a> &nbsp; <a href="TH_188.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo AddReport</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Adiciona um relat&#243;rio com diversas possibilidades de relat&#243;rios, com gr&#225;ficos agrupados, soma dos valores, contagem de linhas e campos etc. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>AddReport </b><i>String1, String2, String3</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Conte&#250;do &#8220;program&#225;vel&#8221; do relat&#243;rio utilizando as regras descritas abaixo.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. T&#237;tulo do relat&#243;rio.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String3</i></td>
+<td class=normal style="width: 3.41667in">Requerido. Identificador do relat&#243;rio que ser&#225; utilizado nas QueryString.</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Sintaxe para o segundo par&#226;metro <i>String1</i>:</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3> [ <i>Campo</i> ( [<i>Parametros_do_campo</i>] ) ] [ &lt;<i>separador</i>&gt; <i>Campo</i> (&#133;) [ , &#133;] ]</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3><i>separador</i> = &#8220;=&#8221; ou  &#8220;,&#8221; ou &#8220;;&#8221;  ou &#8220;-&#8220;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3><i>Campo</i> = [<i>Nome_do_campo</i>] | [# <i>Campo_Calculado</i>]</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3><i>Nome_do_campo</i> &#233; o nome de um campo existente na tabela.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3><i>Campo_Calculdo </i>&#233; o nome do campo calculado (criado a partir de uma f&#243;rmula &#8211; veja <i>Par&#226;metros_do_campo</i>).</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3><i>Parametros_do_campo</i>: </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=normal style="width: 1.18125in"><b>Parametro</b><b></b></td>
+<td class=heading-1 style="width: 3.31875in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.18125in">"s"</td>
+<td class=footer style="width: 3.31875in">Soma dos valores do campo.</td>
+</tr>
+<tr>
+<td class=normal>"c"</td>
+<td class=footer>Contagem dos registros do agrupamento.</td>
+</tr>
+<tr>
+<td class=normal>"g"</td>
+<td class=footer>Com gr&#225;fico.</td>
+</tr>
+<tr>
+<td class=normal>&#8220;gs&#8221;</td>
+<td class=footer>Gr&#225;fico de soma.</td>
+</tr>
+<tr>
+<td class=normal>&#8220;gc&#8221;</td>
+<td class=footer>Gr&#225;fico de contagem.</td>
+</tr>
+<tr>
+<td class=normal>"a"</td>
+<td class=footer>Campo agrupador.</td>
+</tr>
+<tr>
+<td class=normal>"t"</td>
+<td class=footer>Totalizado na munda&#231;a do valor deste campo.</td>
+</tr>
+<tr>
+<td class=normal>"f"</td>
+<td class=footer>Tipo de dados de um campo calculado.</td>
+</tr>
+<tr>
+<td class=normal>"l"</td>
+<td class=footer>R&#243;tulo. Utilize um <i>separador</i> para identificar o r&#243;tulo. Ex.:  &#8220;l;R&#243;tulo&#8221; ou &#8220;l=R&#243;tulo&#8221;</td>
+</tr>
+<tr>
+<td class=normal>"o"</td>
+<td class=footer>Opera&#231;&#227;o.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.18125in">"v"</td>
+<td class=footer style="width: 3.31875in">Valor da primeira linha em um contador montado pela opera&#231;&#227;o.</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>AddReport</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Edit.BeginForm&nbsp;"sncChamaTecnico",&nbsp;"Chamado&nbsp;T&#233;cnico",&nbsp;1,&nbsp;sparEditWhat,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;efValLocClient</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormUnit&nbsp;"chtSolicitante|chtSetor,chtDataSolicita,chtHoraSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormTabs&nbsp;"Solicitante|Setor"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormList&nbsp;"chtSolicitante,chtSetor,chtDataSolicita&#8221;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormFind&nbsp;"chtSolicitante,chtSetor,chtDataSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.<b>AddReport</b>&nbsp;"chtSetor,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Setor",&nbsp;conListSetor</p>
+<p class=preformatted>Edit.<b>AddReport</b>&nbsp;"chtSolicitante,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Usu&#225;rio",&nbsp;conListUsuario</p>
+<p class=preformatted>Edit.<b>AddReport</b>&nbsp;"chtSetor,#chtSetor(l=Soma,gs)",&nbsp;"Por&nbsp;Usu&#225;rio",&nbsp;conListSoma</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"&amp;C&#243;digo",&nbsp;&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;efNext</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtSolicitante",&nbsp;&nbsp;"&amp;Solicitante"</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"S&amp;etor"</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtDataSolicita",&nbsp;"&amp;Data",&nbsp;efFldTypeText,&nbsp;efValOptDate,&nbsp;,&nbsp;_&nbsp;&nbsp;String.LongDate(Now)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtHoraSolicita",&nbsp;"&amp;Hor&#225;rio",&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;_</p>
+<p class=preformatted>String.LeadingZeroes(Hour(Now),&nbsp;2)&nbsp;&amp;&nbsp;":"&nbsp;&amp;&nbsp;&nbsp;String.LeadingZeroes(Minute(Now),&nbsp;2)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FieldInternalLink&nbsp;"chtSolicitante",&nbsp;sparEditWhat,&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.EndForm</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>AddField, DataAddField, ListReportsCaption, ShowReportsLink</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_188.htm"><img src="button.png" border=0></a><a href="TH_188.htm" style="text-decoration:none;">Método EmptyListMessage</a></p>
+<p>
+</body>
+</html>

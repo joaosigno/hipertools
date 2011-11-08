@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Método BeginJava</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_562.htm">previous</a> &nbsp; <a href="TH_564.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo BeginJava </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Inicia a cria&#231;&#227;o de uma fun&#231;&#227;o para a valida&#231;&#227;o de um formul&#225;rio espec&#237;fico. Os par&#226;metros especificam o nome do formul&#225;rio, definido utilizando-se o objeto Form, com o m&#233;todo:</p>
+<p class=normal> Form.BeginForm &#8220;meuAplicativo.asp?O=XZ&#8221;, &#8220;frmFormulario&#8221;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>BeginJava </b><i>String1</i>, <i>String2</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Validate</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. Nome da fun&#231;&#227;o em JavaScript que ser&#225; criada.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String2</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Nome do formul&#225;rio que ser&#225; validado.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>BeginJava</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Dim&nbsp;Validate,&nbsp;Form</p>
+<p class=preformatted>Set&nbsp;Validate&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Validate")</p>
+<p class=preformatted>Set&nbsp;Form&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Form")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.BeginForm&nbsp;"meuAplicativo.asp?O=XY",&nbsp;"frmFormulario",&nbsp;,&nbsp;,&nbsp;"validaForm()"</p>
+<p class=preformatted>Show.HTML&nbsp;"Texto&nbsp;Requirdo:"</p>
+<p class=preformatted>Show.BR</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.Text&nbsp;"txtText",&nbsp;10,&nbsp;,&nbsp;100&nbsp;'Apresenta&nbsp;um&nbsp;INPUT&nbsp;TEXT&nbsp;com&nbsp;MAXLENGTH&nbsp;100</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.Submit&nbsp;"btnSubmit",&nbsp;"Enviar"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Validate.<b>BeginJava</b>&nbsp;"validaForm",&nbsp;"frmFormulario"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;&lt;SCRIPT&nbsp;LANGUAGE="JavaScript"&gt;</p>
+<p class=preformatted>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Function&nbsp;validaForm()</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Validate.IsRequiredOnClient&nbsp;"txtText",&nbsp;"O&nbsp;texto&nbsp;&#233;&nbsp;requerido"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;C&#243;digo&nbsp;em&nbsp;javascript&nbsp;para&nbsp;garantir&nbsp;que&nbsp;o&nbsp;campo&nbsp;txtText&nbsp;seja&nbsp;preenchido,&nbsp;se</p><p class=preformatted-tab1>&nbsp;&nbsp;a&nbsp;pessoa&nbsp;n&#227;o&nbsp;preench&#234;-lo&nbsp;e&nbsp;tentar&nbsp;envi&#225;-lo,&nbsp;ser&#225;&nbsp;apresentada&nbsp;a&nbsp;mensagem&nbsp;"O&nbsp;texto&nbsp;&#233;&nbsp;requerido"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Validate.EndJava</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Validate</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>EndJava, IsRequiredOnClient, CompareFieldsOnClient, JavaClearField, SetFocusOnClient, Form.BeginForm</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_564.htm"><img src="button.png" border=0></a><a href="TH_564.htm" style="text-decoration:none;">Método BeginJS</a></p>
+<p>
+</body>
+</html>

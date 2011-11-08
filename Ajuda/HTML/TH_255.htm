@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Método SelectChooseOption</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_254.htm">previous</a> &nbsp; <a href="TH_256.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo SelectChooseOption</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Inclui uma op&#231;&#227;o numa lista de sele&#231;&#227;o, marcando a op&#231;&#227;o como padr&#227;o caso seu valor seja o mesmo de um par&#226;metro especificado.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>SelectChooseOption</b><i> Variant1 </i>[, <i>String, Variant2 </i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Form</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>Variant1</i></td>
+<td class=footer>Requerido. Valor da op&#231;&#227;o.</td>
+</tr>
+<tr>
+<td class=normal><i>String</i></td>
+<td class=footer>Opcional. Texto exibido na op&#231;&#227;o.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Variant2</i></td>
+<td class=footer style="width: 3.41667in">Opcional. Valor a ser selecionado como padr&#227;o.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>SelectChooseOption</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Dim strValor</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>strValor = &#8220;Valor2&#8221;</p>
+<p class=normal>Form.BeginForm Initializer.ScriptName, "frmEnviar", , ,"return ValidateField()"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Hidden "Campo Escondido", "Valor do campo"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.BeginSelect "Select1", 10, True</p>
+<p class=normal>Form.<b>SelectChooseOption </b>&#8220;Valor1&#8221;, &#8220;Select 1&#8221;, strValor</p>
+<p class=normal>Retorna: &lt;OPTION VALUE=&#8221;Valor1&#8221;&gt;Valor1</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.<b>SelectChooseOption </b>&#8220;Valor2&#8221;, &#8220;Select 2&#8221;, strValor</p>
+<p class=normal>Retorna: &lt;OPTION VALUE=&#8221;Valor2&#8221; SELECTED&gt;Valor2</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.<b>SelectChooseOption </b>&#8220;Valor3&#8221;, &#8220;Select 3&#8221;, strValor</p>
+<p class=normal>Retorna: &lt;OPTION VALUE=&#8221;Valor3&#8221;&gt;Valor3</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndSelect</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Submit<b> </b>"bmtEnvia", "Emitir"</p>
+<p class=normal>Form.Reset<b> </b>"Limpar"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_256.htm"><img src="button.png" border=0></a><a href="TH_256.htm" style="text-decoration:none;">Método SelectCountry</a></p>
+<p>
+</body>
+</html>

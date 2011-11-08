@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Método FieldHint</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_203.htm">previous</a> &nbsp; <a href="TH_205.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo FieldHint</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define que o campo ter&#225; uma explica&#231;&#227;o b&#225;sica para o seu preenchimento. Utiliza-se a propridade HTML <i>TITLE</i> para se fazer com que quando se passe o mouse em cima do campo salte a explica&#231;&#227;o definida. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>FieldHint</b> <i>String1</i>, <i>String2</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome do campo criado utilizando o AddField.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String2</i></td>
+<td class=normal style="width: 3.41667in">Requerido. Texto explicativo &#8211; o <i>hint</i> ou <i>tip</i>.</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>FieldHint</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtTipodeProblema",&nbsp;"&amp;Tipo&nbsp;de&nbsp;Problema&nbsp;",&nbsp;efFldTypeRadio</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldAddValue&nbsp;"chtTipodeProblema",&nbsp;0,&nbsp;"Hardware"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldAddValue&nbsp;"chtTipodeProblema",&nbsp;1,&nbsp;"Software"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldAddValue&nbsp;"chtTipodeProblema",&nbsp;2,&nbsp;"Outros"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldRadioColumns&nbsp;"chtTipodeProblema",&nbsp;3</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>FieldHint</b>&nbsp;"chtTipodeProblema",&nbsp;"Escolha&nbsp;aqui&nbsp;o&nbsp;tipo&nbsp;de&nbsp;problema&nbsp;a&nbsp;ser&nbsp;reportado"</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>AddField, DataAddField</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_205.htm"><img src="button.png" border=0></a><a href="TH_205.htm" style="text-decoration:none;">Método FieldLookup</a></p>
+<p>
+</body>
+</html>

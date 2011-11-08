@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Método SepDateOnClient</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_584.htm">previous</a> &nbsp; <a href="TH_586.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo SepDateOnClient </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>M&#233;todo que implementa no cliente, o Browser, um c&#243;digo em JavaScript que valida uma data separada em tr&#234;s campos.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>SepDateOnClient </b><i>String1</i>, <i>String2</i>, <i>String3</i>, <i>String4</i>, <i>String5</i>, [<i>Boolean</i>], [<i>String6</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1in">Parte</td>
+<td class=heading-1 style="width: 3.5in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 1in"><i>Objeto</i></td>
+<td class=footer style="width: 3.5in">Requerido. Sempre ter&#225; que ser um objeto <i>Validate</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1 </i>a<i> String3</i></td>
+<td class=footer>Requerido. Nome de cada um dos tr&#234;s campos da data. Estes campos s&#227;o definidos com os m&#233;todos do objeto Form.</td>
+</tr>
+<tr>
+<td class=normal><i>String4</i></td>
+<td class=footer>Requerido. Nome do formul&#225;rio definido utilizando-se o m&#233;todo Form.BeginForm</td>
+</tr>
+<tr>
+<td class=normal><i>String5</i></td>
+<td class=footer>Requerido. Nome da fun&#231;&#227;o a ser gerada.</td>
+</tr>
+<tr>
+<td class=normal><i>Boolean</i></td>
+<td class=footer>Opcional. Define se a primeira data deve ser maior do que hoje, isto &#233;, depois desta data. O padr&#227;o &#233; falso (<i>False</i>).</td>
+</tr>
+<tr>
+<td class=normal style="width: 1in"><i>String6</i></td>
+<td class=footer style="width: 3.5in">Opcional. Mensagem de erro apresentada caso a data seja menor do que hoje.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>SepDateOnClient</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Form.BeginForm&nbsp;"meuAplicativo.asp?O=XY",&nbsp;"frmFormulario",&nbsp;,&nbsp;,&nbsp;"validaDates()"</p>
+<p class=preformatted>Show.HTML&nbsp;"Data&nbsp;de&nbsp;In&#237;cio:"</p>
+<p class=preformatted>Form.Text&nbsp;"txtDia1",&nbsp;2</p>
+<p class=preformatted>Form.Text&nbsp;"txtMes1",&nbsp;2</p>
+<p class=preformatted>Form.Text&nbsp;"txtAno1",&nbsp;4</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.Submit&nbsp;"btnSubmit",&nbsp;"Enviar"</p>
+<p class=preformatted>Validate.<b>SepDateOnClient</b>&nbsp;"txtDia1",&nbsp;"txtMes1",&nbsp;"txtAno1",&nbsp;"frmFormulario",&nbsp;"validaDates",&nbsp;True,&nbsp;"A&nbsp;Data&nbsp;de&nbsp;In&#237;cio&nbsp;deve&nbsp;ser&nbsp;depois&nbsp;de&nbsp;hoje"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Validate</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>CompareSepDateOnClient, Form.BeginForm, Form.FormInput, Form.Text</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_586.htm"><img src="button.png" border=0></a><a href="TH_586.htm" style="text-decoration:none;">Método SetFocusOnClient</a></p>
+<p>
+</body>
+</html>

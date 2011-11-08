@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Método FieldLookup</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_204.htm">previous</a> &nbsp; <a href="TH_206.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo FieldLookup</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define que um campo seja apresentado como uma lista que se relaciona com outra tabela. Normalmente este campo ser&#225; definido como uma chave estrangeira, com relacionamento de um para muitos. A id&#233;ia de <i>LookUp</i> &#233; a de que este campo &#8220;procura&#8221; em outra tabela um campo mais nominal e menos num&#233;rico assim deixando o usu&#225;rio livre da tarefa de ficar memorizando c&#243;digos.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>FieldLookup</b> <i>String1</i>, <i>String2</i>, <i>String3</i>, <i>String4</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. <i>String1</i> &#233; nome do campo criado utilizando o AddField.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. Nome v&#225;lido de uma tabela que ser&#225; procurada e listada.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=normal>Requerido. Nome do campo da tabela <i>String2</i> que ter&#225; o valor comparado com o valor do campo <i>String1</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String4</i></td>
+<td class=normal style="width: 3.41667in">Requerido. Nome do campo texto ou de qualquer outro tipo que ser&#225; apresentado na lista ou <i>select</i>.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>FieldLookup</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtSetor",&nbsp;"S&amp;etor",&nbsp;efFldTypeLookUp</p>
+<p class=preformatted>Edit.<b>FieldLookup</b>&nbsp;"chtSetor",&nbsp;"chaSetores",&nbsp;"steCodigo",&nbsp;"steDescricao"</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>AddField, DataAddField, DataAddRelation, DataAddRelationFields, FieldLookupFilter</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_206.htm"><img src="button.png" border=0></a><a href="TH_206.htm" style="text-decoration:none;">Método FieldLookupFilter</a></p>
+<p>
+</body>
+</html>

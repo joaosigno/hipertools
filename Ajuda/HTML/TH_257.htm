@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Método SelectMonthName</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_256.htm">previous</a> &nbsp; <a href="TH_258.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo SelectMonthName </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Exibe uma lista de sele&#231;&#227;o contendo os nomes dos meses por extenso.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>SelectMonthName</b><i> String </i>[, <i>Integer1, Boolean, Integer2 </i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-4 style="width: 1.00486in">Parte<i></i></td>
+<td class=footer style="width: 3.49514in"><b>Descri&#231;&#227;o</b></td>
+</tr>
+<tr>
+<td class=normal style="width: 1.00486in"><i>String</i></td>
+<td class=footer style="width: 3.49514in">Requerido. Nome da lista de sele&#231;&#227;o.</td>
+</tr>
+<tr>
+<td class=normal><i>Integer1</i></td>
+<td class=footer>Opcional. N&#250;mero de itens exibidos na lista. Caso esse par&#226;metro n&#227;o seja fornecido, a lista &#233; exibida como <i>combo box</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>Boolean</i></td>
+<td class=footer>Opcional. Especifica se &#233; poss&#237;vel selecionar mais de um item. Essa propriedade se aplica somente se o n&#250;mero de itens for definido como um valor maior do que 1 (um).</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.00486in"><i>Integer2</i></td>
+<td class=footer style="width: 3.49514in">Opcional. Valor do m&#234;s a ser selecionado como padr&#227;o.</td>
+</tr>
+</table>
+</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Valor</td>
+<td class=footer style="width: 3.41667in"><b>Resultado</b></td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in">1</td>
+<td class=footer style="width: 3.41667in">Janeiro</td>
+</tr>
+<tr>
+<td class=footer>2</td>
+<td class=footer>Fevereiro</td>
+</tr>
+<tr>
+<td class=footer>3</td>
+<td class=footer>Mar&#231;o</td>
+</tr>
+<tr>
+<td class=footer>4</td>
+<td class=footer>Abril</td>
+</tr>
+<tr>
+<td class=footer>5</td>
+<td class=footer>Maio</td>
+</tr>
+<tr>
+<td class=footer>6</td>
+<td class=footer>Junho</td>
+</tr>
+<tr>
+<td class=footer>7</td>
+<td class=footer>Julho</td>
+</tr>
+<tr>
+<td class=footer>8</td>
+<td class=footer>Agosto</td>
+</tr>
+<tr>
+<td class=footer>9</td>
+<td class=footer>Setembro</td>
+</tr>
+<tr>
+<td class=footer>10</td>
+<td class=footer>Outubro</td>
+</tr>
+<tr>
+<td class=footer>11</td>
+<td class=footer>Novembro</td>
+</tr>
+<tr>
+<td class=footer style="width: 1.08333in">12</td>
+<td class=footer style="width: 3.41667in">Dezembro</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>SelectMonthName</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Dim strValor</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>strValor = &#8220;Valor2&#8221;</p>
+<p class=normal>Form.BeginForm Initializer.ScriptName, "frmEnviar", , ,"return ValidateField()"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Hidden "Campo Escondido", "Valor do campo"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.<b>SelectMonthName</b> "Select1", 10, True, 2</p>
+<p class=normal>Retorna: &lt;SELECT NAME=&#8221;Select1&#8221; SIZE=10 MULTIPLE&gt;</p>
+<p class=normal>&lt;OPTION VALUE=1&gt;Janeiro</p>
+<p class=normal>&lt;OPTION VALUE=2 SELECTED&gt;Fevereiro</p>
+<p class=normal>.</p>
+<p class=normal>.</p>
+<p class=normal>.</p>
+<p class=normal>&lt;/SELECT&gt;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Submit<b> </b>"bmtEnvia", "Emitir"</p>
+<p class=normal>Form.Reset<b> </b>"Limpar"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_258.htm"><img src="button.png" border=0></a><a href="TH_258.htm" style="text-decoration:none;">Método SelectOption</a></p>
+<p>
+</body>
+</html>

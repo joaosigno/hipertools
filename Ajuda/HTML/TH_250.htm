@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Método Image</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_249.htm">previous</a> &nbsp; <a href="TH_251.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo Image</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Exibe uma imagem que, ao ser clicada, submete o formul&#225;rio.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Image </b><i>String1, String2 </i>[, <i>String3</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Form</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. Nome da imagem.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=footer>Requerido. Arquivo de origem da imagem.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String3</i></td>
+<td class=footer style="width: 3.41667in">Opcional. Texto alternativo da imagem.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>Image</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form.BeginForm Initializer.ScriptName, "frmEnviar", , ,"return ValidateField()"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Hidden "Campo Escondido", "Valor do campo"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.<b>Image </b>"Imagem", "/img/image.gif", &#8220;Id da Imagem&#8221;</p>
+<p class=normal>Retorna: &lt;INPUT TYPE=&#8221;IMAGE&#8221; NAME=&#8221;Imagem&#8221; SRC=&#8221;/img/image/gif&#8221; ALT=&#8221;Id da Imagem&#8221;&gt;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Submit<b> </b>"bmtEnvia", "Emitir"</p>
+<p class=normal>Form.Reset<b> </b>"Limpar"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_251.htm"><img src="button.png" border=0></a><a href="TH_251.htm" style="text-decoration:none;">Método Palette</a></p>
+<p>
+</body>
+</html>

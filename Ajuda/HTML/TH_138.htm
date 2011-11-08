@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Propriedade ConnectionString</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_137.htm">previous</a> &nbsp; <a href="TH_139.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade ConnectionString</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define ou retorna a ConnectionString que ser&#225; utilizada para a conex&#227;o com o servidor de banco de dados. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>objeto.<b>ConnectionString</b> [= String ] </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>O argumento objeto sempre ser&#225; o objeto EditForm. O valor para <b>ConnectionString </b>dever&#225; ser uma string completa para aconex&#227;o com o banco de dados. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso da propriedade <b>ConnectionString</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal> &#8216;Recomenda-se o uso do Provider exato e n&#227;o do driver ODBC</p>
+<p class=normal>&#8216; (MSDASQL.1)</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Edit.<b>ConnectionString</b> = "Provider= Microsoft.Jet.OLEDB.4.0;"&amp;  _<br>
+    "Data Source=; " &amp; Initializer.SiteRootDir &amp; "\MyData.mdb" &amp; _<br>
+    "User ID=Usuario; " &amp; _<br>
+    "Password=senha; "<br>
+</p>
+<p class=normal>&#8216;ou</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Edit.<b>ConnectionString</b> = "Provider=SQLOLEDB.1;" &amp;  _<br>
+    "Data Source=MyServer; " &amp; _<br>
+    "User ID=Usuario; " &amp; _<br>
+    "Password=senha; " &amp; _<br>
+    "Initial Catalog=MyDatabase"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal> &#8216;ou</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Edit.<b>ConnectionString</b> = "DRIVER={SQL Server};" &amp; _<br>
+    "SERVER=MyServer; " &amp; _<br>
+    "UID=Usuario; " &amp; _<br>
+    "PWD=senha; " &amp; _<br>
+    "DATABASE=MyDatabase"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Edit.UserID = "Usuario"</p>
+<p class=normal>Edit.Password = "Senha"</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>UserID, Password</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_139.htm"><img src="button.png" border=0></a><a href="TH_139.htm" style="text-decoration:none;">Propriedade ConnectionType</a></p>
+<p>
+</body>
+</html>

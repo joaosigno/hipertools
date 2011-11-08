@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Propriedade Item</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_544.htm">previous</a> &nbsp; <a href="TH_546.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Item </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna um objeto do tipo <i>UploadItem</i> previamente adicionado &#224; cole&#231;&#227;o. Esta propriedade &#233; <i>read-only</i>.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>[<i>UploadItem =</i>]<i> objeto</i>.<b>Item</b>(V<i>ariant</i>)</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto UploadItems.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Variant</i><i></i></td>
+<td class=footer style="width: 3.41667in">Requerido. Indice que identifica o objeto. Pode ser o n&#250;mero ou o nome do item no formul&#225;rio de envio.</td>
+</tr>
+</table>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>Item</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Dim Upload, Index</p>
+<p class=normal>Set Upload = Server.CreateObject("HiperTools30.Upload")</p>
+<p class=normal>For Index = 1 to Upload.Items.Count</p>
+<p class=normal>  Show.Message Upload.<b>Items</b>(Index).Name &amp; "=" &amp; Upload.<b>Items</b>(Index).Value</p>
+<p class=normal>Next</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>UploadItems.</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Objeto UploadItem, Item.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_546.htm"><img src="button.png" border=0></a><a href="TH_546.htm" style="text-decoration:none;">Propriedade Name</a></p>
+<p>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Método BeginNode</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_516.htm">previous</a> &nbsp; <a href="TH_518.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo BeginNode</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Adiciona um novo n&#243;. Todo os itens e n&#243;s adicionados ap&#243;s este m&#233;todo e antes do EndNode respectivo ser&#227;o tratados como filhos deste n&#243;.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>BeginNode </b><i>String1</i>[<i>, String2, String3, String4, Boolean</i>]<i></i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>TreeView</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. Texto que ser&#225; mostrado na descri&#231;&#227;o do n&#243;.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=footer>Opcional. URL a ser executada quando o texto do n&#243; for clicado.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=footer>Opcional. T&#237;tulo que aparecer&#225; quando o usu&#225;rio passa com o mouse sobre o texto do n&#243;.</td>
+</tr>
+<tr>
+<td class=normal><i>String4</i></td>
+<td class=footer>Opcional. Nome da image adicionada para ser utilizada como &#237;cone do n&#243;.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Boolean</i></td>
+<td class=footer style="width: 3.41667in">Opcional. Indica se o n&#243; j&#225; dever&#225; ser mostrado aberto.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>BeginNode</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>TreeView.DefaultImage = "Folder"</p>
+<p class=normal>TreeView.AddImage "Folder", "/HiperTools/Img/Folder/"</p>
+<p class=normal>TreeView.AddImage "User", "/HiperTools/Img/Folder/", "aberto", "fechado"</p>
+<p class=normal>TreeView.BeginTree</p>
+<p class=normal>  TreeView.AddItem "1&#186; item", "ScriptAction.asp?Action=1", , "User"</p>
+<p class=normal>  TreeView.<b>BeginNode</b> "1&#186; n&#243;", "ScriptAction.asp?Action=2"</p>
+<p class=normal>    TreeView.AddItem "1&#186; item", "ScriptAction.asp?Action=3"</p>
+<p class=normal>    TreeView.AddSubCaption "SubT&#237;tulo", "ScriptAction.asp?Action=4"</p>
+<p class=normal>  TreeView.EndNode</p>
+<p class=normal>TreeView.EndTree</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>TreeView.</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_518.htm"><img src="button.png" border=0></a><a href="TH_518.htm" style="text-decoration:none;">Método EndNode</a></p>
+<p>
+</body>
+</html>

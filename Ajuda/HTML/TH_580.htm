@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Método IsDateOnClient</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_579.htm">previous</a> &nbsp; <a href="TH_581.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo IsDateOnClient </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>M&#233;todo que implementa no cliente, o Browser, um c&#243;digo em JavaScript que valida uma data.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>IsDateOnClient</b> <i>String1</i>, <i>String2</i>, <i>String3</i>, [<i>Boolean</i>], [<i>String4</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1in">Parte</td>
+<td class=heading-1 style="width: 3.5in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 1in"><i>Objeto</i></td>
+<td class=footer style="width: 3.5in">Requerido. Sempre ter&#225; que ser um objeto <i>Validate</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. Nome do campos que cont&#233;m a data. Definidos com os m&#233;todos do objeto Form.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=footer>Requerido. Nome do formul&#225;rio definido utilizando-se o m&#233;todo Form.BeginForm</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=footer>Requerido. Nome da fun&#231;&#227;o a ser gerada.</td>
+</tr>
+<tr>
+<td class=normal><i>Boolean</i></td>
+<td class=footer>Opcional. Define se a primeira data deve ser maior do que hoje, isto &#233;, depois desta data. O padr&#227;o &#233; falso (<i>False</i>).</td>
+</tr>
+<tr>
+<td class=normal style="width: 1in"><i>String4</i></td>
+<td class=footer style="width: 3.5in">Opcional. Mensagem de erro apresentada caso a data seja menor do que hoje.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>IsDateOnClient</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Form.BeginForm&nbsp;"meuAplicativo.asp?O=XY",&nbsp;"frmDate",&nbsp;,&nbsp;,&nbsp;"validaDates()"</p>
+<p class=preformatted>Show.HTML&nbsp;"Data&nbsp;de&nbsp;In&#237;cio:"</p>
+<p class=preformatted>Form.Text&nbsp;"txtData",&nbsp;12</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.Submit&nbsp;"btnSubmit",&nbsp;"Enviar"</p>
+<p class=preformatted>Validate.<b>IsDateOnClient</b>&nbsp;"txtData",&nbsp;"frmDate",&nbsp;"validaDates",&nbsp;True,&nbsp;"A&nbsp;Data&nbsp;deve&nbsp;ser&nbsp;depois&nbsp;de&nbsp;hoje"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Validate</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>IsDate, Form.BeginForm, Form.FormInput, Form.Text</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_581.htm"><img src="button.png" border=0></a><a href="TH_581.htm" style="text-decoration:none;">Método IsFieldEmptyOnClient</a></p>
+<p>
+</body>
+</html>

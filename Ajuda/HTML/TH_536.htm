@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Propriedade Value</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_535.htm">previous</a> &nbsp; <a href="TH_537.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Value </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna o valor do item adicionado &#224; cole&#231;&#227;o de UploadItems, equivale ao valor do item adicionado no formul&#225;rio HTML enviado atrav&#233;s do m&#233;todo &#8220;post&#8221; do protocolo HTTP. Esta propriedade &#233; <i>read-only</i>.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>[<i>Variant =</i>]<i> objeto</i>.<b>Value</b> </p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto UploadItem.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Caso o item seja um arquivo o valor retornado ser&#225; o conte&#250;do do arquivo, caso contr&#225;rio ser&#225; o valor do item do formul&#225;rio.</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>Value</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>' Mostra as informa&#231;&#245;es dos arquivos enviados</p>
+<p class=normal>Show.Message "&lt;H3&gt;Informa&#231;&#245;es dos arquivos&lt;/H3&gt;"</p>
+<p class=normal>For Index = 1 to Upload.FormCount</p>
+<p class=normal>  If (Upload.Form(Index).IsFile) Then</p>
+<p class=normal>    Show.Message Upload.Form(Index).Name &amp; "=" &amp; _</p>
+<p class=normal>                 Upload.Form(Index).<b>Value</b></p>
+<p class=normal>  End If</p>
+<p class=normal>Next</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>UploadItem.</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>IsFile</i>, ServerName, UserFilename, TotalBytes.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_537.htm"><img src="button.png" border=0></a><a href="TH_537.htm" style="text-decoration:none;">Propriedade UserFilename</a></p>
+<p>
+</body>
+</html>

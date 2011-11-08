@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Método Text</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_261.htm">previous</a> &nbsp; <a href="TH_263.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo Text </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Exibe um campo para digita&#231;&#227;o de texto em uma &#250;nica linha.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Text </b><i>String, Integer1</i> [, Variant, <i>Integer2</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Form</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String</i></td>
+<td class=footer>Requerido. Nome do campo.</td>
+</tr>
+<tr>
+<td class=normal><i>Integer1</i></td>
+<td class=footer>Requerido. Comprimento do campo em caracteres.</td>
+</tr>
+<tr>
+<td class=normal><i>Variant</i></td>
+<td class=footer>Opcional. Valor do campo.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Integer2</i></td>
+<td class=footer style="width: 3.41667in">Opcional. Comprimento m&#225;ximo do valor do campo, em caracteres.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>Text</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form.BeginForm Initializer.ScriptName, "frmEnviar", , ,"return ValidateField()"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.<b>Text</b> &#8220;Usuario&#8221;, 10, , 20</p>
+<p class=normal>Retorna: &lt;INPUT TYPE=&#8221;TEXT&#8221; NAME=&#8221;Usuario&#8221; SIZE=10 MAXLENGHT=20&gt;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.<b>Text</b> &#8220;Usuario&#8221;, 10, &#8220;UsuarioX&#8221;, 20</p>
+<p class=normal>Retorna: &lt;INPUT TYPE=&#8221;TEXT&#8221; NAME=&#8221;Usuario&#8221; VALUE=&#8221;UsuarioX&#8221; SIZE=10 MAXLENGHT=20&gt;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Password &#8220;Senha&#8221;, 10, 20</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Submit<b> </b>"bmtEnvia", "Emitir"</p>
+<p class=normal>Form.Reset<b> </b>"Limpar"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_263.htm"><img src="button.png" border=0></a><a href="TH_263.htm" style="text-decoration:none;">Método TextArea</a></p>
+<p>
+</body>
+</html>

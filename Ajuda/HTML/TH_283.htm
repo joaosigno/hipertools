@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Propriedade Key</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_282.htm">previous</a> &nbsp; <a href="TH_284.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Key</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Determina a chave do item do Pack.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Key</b></p>
+<p class=body-text-indent-3>O argumento <i>objeto</i> sempre ser&#225; o objeto <i>PackItem</i>.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso da propriedade Value.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Dim&nbsp;Pack,&nbsp;Item</p>
+<p class=preformatted>Set&nbsp;Pack&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Pack")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Add&nbsp;"Table0",&nbsp;"Pedidos"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Set&nbsp;Item&nbsp;=&nbsp;Pack("Table0")&nbsp;&#8216;Aqui&nbsp;se&nbsp;referencia&nbsp;o&nbsp;PackItem</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack("Table0")&nbsp;=&nbsp;"PedidosAlt"</p>
+<p class=preformatted>Pack.Item(1).Value&nbsp;=&nbsp;"PedidosAlt"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Item.<b>Key</b></p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;&lt;BR&gt;Table0</p>
+<p class=preformatted>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>PackItem</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Pack.Add, Pack.Remove, Pack.Find</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_284.htm"><img src="button.png" border=0></a><a href="TH_284.htm" style="text-decoration:none;">Propriedade Pack</a></p>
+<p>
+</body>
+</html>

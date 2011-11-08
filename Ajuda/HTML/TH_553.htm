@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Método AddEditForm</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_552.htm">previous</a> &nbsp; <a href="TH_554.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo AddEditForm</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Adiciona op&#231;&#245;es espec&#237;ficas para o Objeto EditForm em uma QueryString na cria&#231;&#227;o de uma ou mais URL's dentro do escopo de um BeginURL e EndURL.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>AddEditForm </b>[ <i>String1</i>, <i>String2</i>, <i>String3</i>, <i>String4</i>, <i>String5</i>, <i>Sting6 </i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.60417in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.60417in">Requerido. Sempre ter&#225; que ser um objeto <i>URL</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Opcional. <i>String1</i> &#233; a op&#231;&#227;o de edi&#231;&#227;o. Define se o formul&#225;rio permitir&#225; edi&#231;&#227;o de registros. efQueryStrEditable.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=footer>Opcional. <i>String2</i> &#233; a op&#231;&#227;o de a&#231;&#227;o. Define qual a&#231;&#227;o (inclus&#227;o, exclus&#227;o, altera&#231;&#227;o, etc...) ser&#225; tomada pelo EditForm. efQueryStrAction.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=footer>Opcional. <i>String3</i> &#233; a op&#231;&#227;o de escolha. Define qual formul&#225;rio ser&#225; apresentado. efQueryStrWhat.</td>
+</tr>
+<tr>
+<td class=normal><i>String4</i></td>
+<td class=footer>Opcional. <i>String4 </i>&#233; a op&#231;&#227;o de filtro. Define uma situa&#231;&#227;o para um determinado formul&#225;rio de forma a filtrar os registros. efQueryStrFilter</td>
+</tr>
+<tr>
+<td class=normal><i>String5</i></td>
+<td class=footer>Opcional. <i>String5</i> &#233; a op&#231;&#227;o de valores padr&#227;o. Define valores padr&#227;o para um ou mais campos na inclus&#227;o de um registro. efQueryStrDefaults.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String6</i></td>
+<td class=footer style="width: 3.60417in">Opcional. <i>String6</i> &#233; a op&#231;&#227;o de listagens. Define qual listagem ser&#225; apresentada a partir de op&#231;&#245;es criadas pelo usu&#225;rio. efQueryStrList.</td>
+</tr>
+</table>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>AddEditForm</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>URL.BeginURL Initializer.ScriptName</p>
+<p class=normal>URL.<b>AddEditForm </b>efQueryStrEditable, efQSActionSummary, conWhatChamaTecnico, "intCodigo &gt; 10 and strNome like '%Pessoa%'", , conList1</p>
+<p class=normal>URL.Show "Relat&#243;rio 1"</p>
+<p class=normal>URL.EndURL</p>
+<p class=normal>Show.BR</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>URL.BeginURL Initializer.ScriptName</p>
+<p class=normal>URL.<b>AddEditForm</b> efQueryStrEditable, efQSActionAdd, conWhatUser, , "intCodigo=20;strNome='Pessoa'"</p>
+<p class=normal>URL.Show "Inclus&#227;o de Usu&#225;rio"</p>
+<p class=normal>Show.BR</p>
+<p class=normal>URL.EndURL</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>URL</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_554.htm"><img src="button.png" border=0></a><a href="TH_554.htm" style="text-decoration:none;">Método BeginURL</a></p>
+<p>
+</body>
+</html>

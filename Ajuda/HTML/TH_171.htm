@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Método DataAddField</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_170.htm">previous</a> &nbsp; <a href="TH_172.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo DataAddField</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define o nome da coluna, tipo do dado, tamanho e se ser&#225; requerido ou n&#227;o. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>DataAddField </b><i>String1, String2, Integer, Boolean</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome v&#225;lido de uma coluna que ser&#225; utilizado na tabela que ser&#225; utilizada pelo EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. Tipo de dado que ser&#225; utilizado pelo EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>Integer</i></td>
+<td class=normal>Requerido. Tamanho da coluna, que ser&#225; utilizado pelo EditForm.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Boolean</i></td>
+<td class=normal style="width: 3.41667in">Requerido. Define se a coluna &#233; ou n&#227;o requerida. Equivalente ao NOT NULL e NULL do SQL.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>DataAddField</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataTable&nbsp;"sncChamaTecnico"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>DataAddField</b>&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;efDataTypeInt,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4",&nbsp;efRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>DataAddField</b>&nbsp;"chtSolicitante",&nbsp;&nbsp;efDataTypeVarChar,&nbsp;"100",&nbsp;efRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>DataAddField</b>&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;efDataTypeVarChar,&nbsp;&nbsp;"50",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>DataAddField</b>&nbsp;"chtDataSolicita",&nbsp;efDataTypeDateTime,&nbsp;"10",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>DataAddField</b>&nbsp;"chtHoraSolicita",&nbsp;efDataTypeVarChar,&nbsp;&nbsp;&nbsp;"5",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddPrimaryKey&nbsp;"chtCodigo"</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>DataTable, DataAddPrimaryKey, DataAddRelation, &#8220;Constantes Data Types&#8221;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_172.htm"><img src="button.png" border=0></a><a href="TH_172.htm" style="text-decoration:none;">Método DataAddPrimaryKey</a></p>
+<p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Propriedade OverwriteFiles</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_526.htm">previous</a> &nbsp; <a href="TH_528.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade OverwriteFiles </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Espec&#237;fica se ser&#225; necess&#225;rio sobrepor o arquivo existente caso ele j&#225; exista no destino.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>OverwriteFiles</b> [<i>= Boolean</i>] </p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto <i>Upload</i>.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Caso o valor da propriedade seja igual a <i>verdadeiro</i> indicar&#225; que ser&#225; necess&#225;rio sobrepor o arquivo caso ele exista no destino, se o valor for igual a <i>falso</i> indicar&#225; que no caso do arquivo j&#225; existir no destino ser&#225; gerado um erro.</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>OverwriteFiles</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Dim Upload</p>
+<p class=normal>Set Upload = Server.CreateObject("HiperTools30.Upload")</p>
+<p class=normal>Upload.MaxBytes<b> = </b>15360</p>
+<p class=normal>Upload.<b>OverwriteFiles = </b>True</p>
+<p class=normal>Upload.Path <b>= </b>"c:\inertpub\wwwroot\XYZ\upload"</p>
+<p class=normal>Upload.SaveAs File.ExtractFileName(Upload.ServerName)</p>
+<p class=normal>Set Upload = Nothing</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Upload</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Save, SaveAs.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_528.htm"><img src="button.png" border=0></a><a href="TH_528.htm" style="text-decoration:none;">Propriedade Path</a></p>
+<p>
+</body>
+</html>

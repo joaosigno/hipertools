@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Propriedade Item</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_320.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Item</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna o objeto <i>RegistrySubKey</i> associado ao item especificado. Essa propriedade &#233; <i>read-only</i>.</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Item(</b><i>Variant</i><b>)</b></p>
+<p class=normal>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 2.16597in">Parte</td>
+<td class=heading-1 style="width: 2.95278in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.16597in"><i>objeto</i></td>
+<td class=normal style="width: 2.95278in">Ser&#225; sempre uma refer&#234;ncia a um objeto <i>RegistrySubKeys</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.16597in"><i>Variant</i></td>
+<td class=normal style="width: 2.95278in"><i>String</i> representando o nome da subchave ou <i>Integer</i> indicando o &#237;ndice.</td>
+</tr>
+</table>
+</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>Item</b>.</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>For intIdx = 1 To Registry.SubKeys.Count</p>
+<p class=normal>Show.HTMLCR Registry.SubKeys(intIdx).Name &amp; &#8220;&lt;BR&gt;&#8221;</p>
+<p class=normal>Next</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>RegistrySubKeys</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p>
+</body>
+</html>

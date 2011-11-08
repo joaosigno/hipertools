@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Método CreateValue</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_306.htm">previous</a> &nbsp; <a href="TH_308.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo CreateValue</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>	Cria um valor dentro da chave definida na propriedade <i>Key</i>.</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>CreateValue</b> <i>String</i>, [<i>Variant</i>] , [<i>Long</i>]</p>
+<p class=normal>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 0.886111in">Parte</td>
+<td class=heading-1 style="width: 3.86389in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 0.886111in"><i>Objeto</i></td>
+<td class=normal style="width: 3.86389in">Ser&#225; sempre uma refer&#234;ncia a um objeto <i>Registry.</i></td>
+</tr>
+<tr>
+<td class=heading-4>String</td>
+<td class=normal>Nome do valor a ser criado.</td>
+</tr>
+<tr>
+<td class=normal><i>Variant</i></td>
+<td class=normal>Opcional. Dados a serem armazenados no valor.</td>
+</tr>
+<tr>
+<td class=normal style="width: 0.886111in"><i>Long</i></td>
+<td class=normal style="width: 3.86389in">Opcional. Tipo do valor. Deve ser uma das constantes de tipo de valor. Caso o par&#226;metro n&#224;o seja fornecido, o valor &#233; considerado REG_SZ.</td>
+</tr>
+</table>
+</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Os poss&#237;veis valores para o par&#226;metro <i>Long</i> s&#227;o os seguintes:</p>
+<p class=normal>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 2.0625in">Constante</td>
+<td class=heading-1 style="width: 0.890972in">Valor</td>
+<td class=heading-1 style="width: 1.79653in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=footer style="width: 2.0625in">rgSz</td>
+<td class=normal style="width: 0.890972in">1</td>
+<td class=footer style="width: 1.79653in"><i>String</i> Unicode</td>
+</tr>
+<tr>
+<td class=normal>rgExpandSz</td>
+<td class=normal>2</td>
+<td class=normal><i>String</i> com vari&#225;veis de ambiente (%valor%)</td>
+</tr>
+<tr>
+<td class=normal>rgBinary</td>
+<td class=normal>3</td>
+<td class=normal>valor bin&#225;rio gen&#233;rico (matriz de Bytes)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.0625in">rgDword</td>
+<td class=normal style="width: 0.890972in">4</td>
+<td class=normal style="width: 1.79653in">double word (Long)</td>
+</tr>
+</table>
+</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>CreateValue</b>.</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Registry.<b>CreateValue</b> &#8220;My<i>String</i>&#8221;, &#8220;HiperTools&#8221;</p>
+<p class=normal>Registry.<b>CreateValue</b> &#8220;MyDWord&#8221;, 1999, rgDword</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Registry</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_308.htm"><img src="button.png" border=0></a><a href="TH_308.htm" style="text-decoration:none;">Método DeleteKey</a></p>
+<p>
+</body>
+</html>

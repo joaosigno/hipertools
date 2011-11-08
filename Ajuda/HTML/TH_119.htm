@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Objeto EditForm</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_118.htm">previous</a> &nbsp; <a href="TH_120.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=objetos>Objeto EditForm</p>
+<p class=objetos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Objeto que acelera o desenvolvimento formul&#225;rios de edi&#231;&#227;o de dados. Cria formul&#225;rios, listagens, localiza&#231;&#245;es de registros, relat&#243;rios de resumos, com pouca m&#227;o-de-obra, mas com recursos avan&#231;ados. </p>
+<p class=normal>Via este objeto, voc&#234; poder&#225; criar verdadeiros formul&#225;rios para manipula&#231;&#227;o de dados diretamente via a Interface Web sem as preocupa&#231;&#245;es da intera&#231;&#227;o com o sistema, servidor Web e servidor de banco de dados. </p>
+<p class=normal>O sistema inclui um mini dicion&#225;rio de dados que facilitar a cria&#231;&#227;o das tabelas e manuten&#231;&#227;o dos dados, com seguran&#231;a e integridade relacional. </p>
+<p class=normal>O EditForm tamb&#233;m disp&#245;e de um sistema completo para localiza&#231;&#227;o/sele&#231;&#227;o de registros integrados entre si, bem como com a possbilidade de v&#225;rios tipos de relat&#243;rios gr&#225;ficos ou n&#227;o simplificados via uma macro linguagem definidos em uma s&#243; linha. </p>
+<p class=body-text-indent-3>Boa parte das defini&#231;&#245;es do EditForm s&#227;o definidas em uma linha, como o Edit.FormUnit e Edit.FormFind que formatam a forma de apresenta&#231;&#227;o dos dados e os campos que ser&#227;o utilizados na localiza&#231;&#227;o respectativamente. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Set Edit = Server.CreateObject(&#8220;HiperTools30.EditForm&#8221;)</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilusta como obter o objeto EditForm e como utilizar alguma de suas propriedades. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&lt;!--#INCLUDE&nbsp;VIRTUAL="/HiperTools/HiperTools30.inc"--&gt;</p>
+<p class=preformatted>&lt;%</p>
+<p class=preformatted>Dim&nbsp;Edit</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Set&nbsp;Edit&nbsp;=&nbsp;Server.CreateObject("HiperTools30.EditForm")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Const&nbsp;conChamaTecnico&nbsp;=&nbsp;1</p>
+<p class=preformatted>&nbsp;&nbsp;Const&nbsp;conListSetor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;2</p>
+<p class=preformatted>&nbsp;&nbsp;Const&nbsp;conListSoma&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;3</p>
+<p class=preformatted>&nbsp;&nbsp;Const&nbsp;conListUsuario&nbsp;&nbsp;=&nbsp;4</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;MainBody</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>REM&nbsp;--------------------------------------------------------------------</p>
+<p class=preformatted>REM&nbsp;&nbsp;Formul&#225;rio&nbsp;de&nbsp;chamado&nbsp;t&#233;cnico</p>
+<p class=preformatted>REM&nbsp;--------------------------------------------------------------------Public&nbsp;Sub&nbsp;GetChamaTecnico</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataTable&nbsp;"sncChamaTecnico"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;efDataTypeInt,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4",&nbsp;efRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtSolicitante",&nbsp;&nbsp;efDataTypeVarChar,&nbsp;"100",&nbsp;efRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;efDataTypeVarChar,&nbsp;&nbsp;"50",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtDataSolicita",&nbsp;efDataTypeDateTime,&nbsp;"10",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtHoraSolicita",&nbsp;efDataTypeVarChar,&nbsp;&nbsp;&nbsp;"5",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddPrimaryKey&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.BeginForm&nbsp;"sncChamaTecnico",&nbsp;"Chamado&nbsp;T&#233;cnico",&nbsp;1,&nbsp;sparEditWhat,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;efValLocClient</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormUnit&nbsp;"chtSolicitante=Setor;chtSetor,chtDataSolicita,chtHoraSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormList&nbsp;"chtSolicitante,chtSetor,chtDataSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormFind&nbsp;"chtSolicitante,chtSetor,chtDataSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSetor,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Setor",&nbsp;conListSetor</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSolicitante,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Usu&#225;rio",&nbsp;conListUsuario</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSetor,#chtSetor(l=Soma,gs)",&nbsp;"Soma",&nbsp;conListSoma</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"C&#243;digo",&nbsp;&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;efNext</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtSolicitante",&nbsp;&nbsp;"Solicitante"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Setor"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtDataSolicita",&nbsp;"Data",&nbsp;efFldTypeText,&nbsp;efValOptDate,&nbsp;,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;String.LongDate(Now)</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtHoraSolicita",&nbsp;"Hor&#225;rio",&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;String.LeadingZeroes(Hour(Now),&nbsp;2)&nbsp;&amp;&nbsp;":"&nbsp;&amp;&nbsp;&nbsp;String.LeadingZeroes(Minute(Now),&nbsp;2)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldInternalLink&nbsp;"chtSolicitante",&nbsp;sparEditWhat,&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.EndForm</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>End&nbsp;Sub</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>REM&nbsp;--------------------------------------------------------------------</p>
+<p class=preformatted>REM&nbsp;Corpo&nbsp;Principal&nbsp;do&nbsp;sistema</p>
+<p class=preformatted>REM&nbsp;--------------------------------------------------------------------</p>
+<p class=preformatted>Private&nbsp;Sub&nbsp;MainBody</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.ConnectionString&nbsp;=&nbsp;"DRIVER={SQL&nbsp;Server};"&nbsp;_<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"SERVER=MyZYCServer;&nbsp;"&nbsp;_<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"UID=Usuario;&nbsp;"&nbsp;_<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"PWD=senha;&nbsp;"&nbsp;_<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"DATABASE=ZTIDatabase"</p>
+<p class=preformatted>Edit.UserID&nbsp;=&nbsp;"Usuario"</p>
+<p class=preformatted>Edit.Password&nbsp;=&nbsp;"Senha"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.OpenConnection</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Select&nbsp;Case&nbsp;Edit.parWhat</p>
+<p class=preformatted>&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;conChamaTecnico</p>
+<p class=preformatted>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GetChamaTecnico</p>
+<p class=preformatted>'&nbsp;&nbsp;&nbsp;&nbsp;Para&nbsp;criar&nbsp;a&nbsp;tabela&nbsp;retire&nbsp;o&nbsp;rem&nbsp;abaixo</p>
+<p class=preformatted>REM&nbsp;&nbsp;Edit.TableCreate&nbsp;"anuMembros"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;Else</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;End&nbsp;Select</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.RedirectActions</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Default.HTMLBegin</p>
+<p class=preformatted>&nbsp;&nbsp;Default.HeadAll&nbsp;"ANUI&nbsp;-&nbsp;Ger&#234;ncia&nbsp;de&nbsp;Membros"</p>
+<p class=preformatted>&nbsp;&nbsp;Default.BodyBegin</p>
+<p class=preformatted>&nbsp;&nbsp;Show.Center</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Table.BeginTable&nbsp;"65%"</p>
+<p class=preformatted>&nbsp;&nbsp;Table.Style.Color2&nbsp;=&nbsp;""</p>
+<p class=preformatted>&nbsp;&nbsp;Table.BeginRow&nbsp;4</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Table.ColumnVAlign&nbsp;=&nbsp;"Middle"</p>
+<p class=preformatted>&nbsp;Table.Column&nbsp;"&lt;img&nbsp;src=""/img/Logo2.gif""&nbsp;width=""50%""&nbsp;height=""50%""&gt;"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Table.Column&nbsp;"&lt;Font&nbsp;Color=""DarkBlue""&gt;ANUI&nbsp;-&nbsp;Ger&#234;ncia&nbsp;de&nbsp;Membros"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Table.EndRow</p>
+<p class=preformatted>&nbsp;&nbsp;Table.EndTable</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;FormatTable</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Set&nbsp;Edit.Style&nbsp;=&nbsp;Table.Style</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;If&nbsp;Edit.IsMyAction&nbsp;Then</p>
+<p class=preformatted>&nbsp;&nbsp;&nbsp;&nbsp;ShowFirstPage</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;End&nbsp;If</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Default.PageFooterDefault</p>
+<p class=preformatted>&nbsp;&nbsp;Default.BodyEnd</p>
+<p class=preformatted>&nbsp;&nbsp;Default.HTMLEnd</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>End&nbsp;Sub</p>
+<p class=preformatted>REM&nbsp;--------------------------------------------------------------------</p>
+<p class=preformatted>REM&nbsp;Final&nbsp;da&nbsp;Sub&nbsp;MainBody</p>
+<p class=preformatted>%&gt;</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>Alguns dos seus recursos s&#227;o: </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Valida&#231;&#227;o autom&#225;tica de campos;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Edi&#231;&#227;o de multiplas tabelas num s&#243; formul&#225;rio;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Localiza&#231;&#227;o simples e avan&#231;ada de registros;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Dicas para preenchimentos de campos;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Campos contendo arquivos(Ex.:Imagens, DOCs, PDFs);</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Multiplas ordena&#231;&#245;es de listagens;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>Relat&#243;rios com campos externos, calculados, contados, gr&#225;ficos e etc;</p>
+<p class=normal>&#8226;	</p>
+<p class=normal>C&#243;pias de registros;</p>
+<p class=body-text-indent-3>E muitas outras facilidades que tornam as edi&#231;&#245;es bastante simples. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_120.htm"><img src="button.png" border=0></a><a href="TH_120.htm" style="text-decoration:none;">Constantes Validation Locations</a></p>
+<p class=normal><a href="TH_121.htm"><img src="button.png" border=0></a><a href="TH_121.htm" style="text-decoration:none;">Constantes QueryString Parameters</a></p>
+<p class=normal><a href="TH_122.htm"><img src="button.png" border=0></a><a href="TH_122.htm" style="text-decoration:none;">Constantes QueryString Action Values</a></p>
+<p class=normal><a href="TH_123.htm"><img src="button.png" border=0></a><a href="TH_123.htm" style="text-decoration:none;">Constantes Data Types</a></p>
+<p class=normal><a href="TH_124.htm"><img src="button.png" border=0></a><a href="TH_124.htm" style="text-decoration:none;">Constantes Field Requirement</a></p>
+<p class=normal><a href="TH_125.htm"><img src="button.png" border=0></a><a href="TH_125.htm" style="text-decoration:none;">Constantes Relational Integrity</a></p>
+<p class=normal><a href="TH_126.htm"><img src="button.png" border=0></a><a href="TH_126.htm" style="text-decoration:none;">Constantes Relation Type</a></p>
+<p class=normal><a href="TH_127.htm"><img src="button.png" border=0></a><a href="TH_127.htm" style="text-decoration:none;">Constantes Field Types</a></p>
+<p class=normal><a href="TH_128.htm"><img src="button.png" border=0></a><a href="TH_128.htm" style="text-decoration:none;">Constantes Validation Options</a></p>
+<p class=normal><a href="TH_129.htm"><img src="button.png" border=0></a><a href="TH_129.htm" style="text-decoration:none;">Constantes Field Disable Condition</a></p>
+<p class=normal><a href="TH_130.htm"><img src="button.png" border=0></a><a href="TH_130.htm" style="text-decoration:none;">Constantes Operator types</a></p>
+<p class=normal><a href="TH_131.htm"><img src="button.png" border=0></a><a href="TH_131.htm" style="text-decoration:none;">Constantes Character Case</a></p>
+<p class=normal><a href="TH_132.htm"><img src="button.png" border=0></a><a href="TH_132.htm" style="text-decoration:none;">Constantes Alphabetic Index Types</a></p>
+<p class=normal><a href="TH_133.htm"><img src="button.png" border=0></a><a href="TH_133.htm" style="text-decoration:none;">Constantes Connection Types</a></p>
+<p class=normal><a href="TH_134.htm"><img src="button.png" border=0></a><a href="TH_134.htm" style="text-decoration:none;">Constantes Identity</a></p>
+<p class=normal><a href="TH_135.htm"><img src="button.png" border=0></a><a href="TH_135.htm" style="text-decoration:none;">Propriedade AllowIdentityUpdate</a></p>
+<p class=normal><a href="TH_136.htm"><img src="button.png" border=0></a><a href="TH_136.htm" style="text-decoration:none;">Propriedade AlphabeticIndex</a></p>
+<p class=normal><a href="TH_137.htm"><img src="button.png" border=0></a><a href="TH_137.htm" style="text-decoration:none;">Propriedade Buttons</a></p>
+<p class=normal><a href="TH_138.htm"><img src="button.png" border=0></a><a href="TH_138.htm" style="text-decoration:none;">Propriedade ConnectionString</a></p>
+<p class=normal><a href="TH_139.htm"><img src="button.png" border=0></a><a href="TH_139.htm" style="text-decoration:none;">Propriedade ConnectionType</a></p>
+<p class=normal><a href="TH_140.htm"><img src="button.png" border=0></a><a href="TH_140.htm" style="text-decoration:none;">Propriedade CurrConnection</a></p>
+<p class=normal><a href="TH_141.htm"><img src="button.png" border=0></a><a href="TH_141.htm" style="text-decoration:none;">Propriedade DebugMode</a></p>
+<p class=normal><a href="TH_142.htm"><img src="button.png" border=0></a><a href="TH_142.htm" style="text-decoration:none;">Propriedade Errors</a></p>
+<p class=normal><a href="TH_143.htm"><img src="button.png" border=0></a><a href="TH_143.htm" style="text-decoration:none;">Propriedade FirstPageLink</a></p>
+<p class=normal><a href="TH_144.htm"><img src="button.png" border=0></a><a href="TH_144.htm" style="text-decoration:none;">Propriedade FilterBooleanOperator</a></p>
+<p class=normal><a href="TH_145.htm"><img src="button.png" border=0></a><a href="TH_145.htm" style="text-decoration:none;">Propriedade LinkTarget</a></p>
+<p class=normal><a href="TH_146.htm"><img src="button.png" border=0></a><a href="TH_146.htm" style="text-decoration:none;">Propriedade ListTitle</a></p>
+<p class=normal><a href="TH_147.htm"><img src="button.png" border=0></a><a href="TH_147.htm" style="text-decoration:none;">Propriedade ListReportsCaption</a></p>
+<p class=normal><a href="TH_148.htm"><img src="button.png" border=0></a><a href="TH_148.htm" style="text-decoration:none;">Propriedade ListSetOfOrdersCaption</a></p>
+<p class=normal><a href="TH_149.htm"><img src="button.png" border=0></a><a href="TH_149.htm" style="text-decoration:none;">Propriedade LockTimeOut</a></p>
+<p class=normal><a href="TH_150.htm"><img src="button.png" border=0></a><a href="TH_150.htm" style="text-decoration:none;">Propriedade Password</a></p>
+<p class=normal><a href="TH_151.htm"><img src="button.png" border=0></a><a href="TH_151.htm" style="text-decoration:none;">Propriedade parWhat</a></p>
+<p class=normal><a href="TH_152.htm"><img src="button.png" border=0></a><a href="TH_152.htm" style="text-decoration:none;">Propriedade parAction</a></p>
+<p class=normal><a href="TH_153.htm"><img src="button.png" border=0></a><a href="TH_153.htm" style="text-decoration:none;">Propriedade ReportTitle</a></p>
+<p class=normal><a href="TH_154.htm"><img src="button.png" border=0></a><a href="TH_154.htm" style="text-decoration:none;">Propriedade ShowButtons</a></p>
+<p class=normal><a href="TH_155.htm"><img src="button.png" border=0></a><a href="TH_155.htm" style="text-decoration:none;">Propriedade ShowListUpperBar</a></p>
+<p class=normal><a href="TH_156.htm"><img src="button.png" border=0></a><a href="TH_156.htm" style="text-decoration:none;">Propriedade ShowSetOfOrdersLink</a></p>
+<p class=normal><a href="TH_157.htm"><img src="button.png" border=0></a><a href="TH_157.htm" style="text-decoration:none;">Propriedade ShowRecordCount</a></p>
+<p class=normal><a href="TH_158.htm"><img src="button.png" border=0></a><a href="TH_158.htm" style="text-decoration:none;">Propriedade ShowSQLQuery</a></p>
+<p class=normal><a href="TH_159.htm"><img src="button.png" border=0></a><a href="TH_159.htm" style="text-decoration:none;">Propriedade ShowReportsLink</a></p>
+<p class=normal><a href="TH_160.htm"><img src="button.png" border=0></a><a href="TH_160.htm" style="text-decoration:none;">Propriedade ShowUnitUpperBar</a></p>
+<p class=normal><a href="TH_161.htm"><img src="button.png" border=0></a><a href="TH_161.htm" style="text-decoration:none;">Propriedade Style</a></p>
+<p class=normal><a href="TH_162.htm"><img src="button.png" border=0></a><a href="TH_162.htm" style="text-decoration:none;">Propriedade UnitTitle</a></p>
+<p class=normal><a href="TH_163.htm"><img src="button.png" border=0></a><a href="TH_163.htm" style="text-decoration:none;">Propriedade UserID</a></p>
+<p class=normal><a href="TH_164.htm"><img src="button.png" border=0></a><a href="TH_164.htm" style="text-decoration:none;">Método IsMyAction</a></p>
+<p class=normal><a href="TH_165.htm"><img src="button.png" border=0></a><a href="TH_165.htm" style="text-decoration:none;">Método FieldValue</a></p>
+<p class=normal><a href="TH_166.htm"><img src="button.png" border=0></a><a href="TH_166.htm" style="text-decoration:none;">Método HasTable</a></p>
+<p class=normal><a href="TH_167.htm"><img src="button.png" border=0></a><a href="TH_167.htm" style="text-decoration:none;">Método ShowActions</a></p>
+<p class=normal><a href="TH_168.htm"><img src="button.png" border=0></a><a href="TH_168.htm" style="text-decoration:none;">Método RedirectActions</a></p>
+<p class=normal><a href="TH_169.htm"><img src="button.png" border=0></a><a href="TH_169.htm" style="text-decoration:none;">Método OpenConnection</a></p>
+<p class=normal><a href="TH_170.htm"><img src="button.png" border=0></a><a href="TH_170.htm" style="text-decoration:none;">Método DataTable</a></p>
+<p class=normal><a href="TH_171.htm"><img src="button.png" border=0></a><a href="TH_171.htm" style="text-decoration:none;">Método DataAddField</a></p>
+<p class=normal><a href="TH_172.htm"><img src="button.png" border=0></a><a href="TH_172.htm" style="text-decoration:none;">Método DataAddPrimaryKey</a></p>
+<p class=normal><a href="TH_173.htm"><img src="button.png" border=0></a><a href="TH_173.htm" style="text-decoration:none;">Método DataAddRelation</a></p>
+<p class=normal><a href="TH_174.htm"><img src="button.png" border=0></a><a href="TH_174.htm" style="text-decoration:none;">Método DataAddRelationFields</a></p>
+<p class=normal><a href="TH_175.htm"><img src="button.png" border=0></a><a href="TH_175.htm" style="text-decoration:none;">Método DataAddIndex</a></p>
+<p class=normal><a href="TH_176.htm"><img src="button.png" border=0></a><a href="TH_176.htm" style="text-decoration:none;">Método DataIndexClustered</a></p>
+<p class=normal><a href="TH_177.htm"><img src="button.png" border=0></a><a href="TH_177.htm" style="text-decoration:none;">Método BeginForm</a></p>
+<p class=normal><a href="TH_178.htm"><img src="button.png" border=0></a><a href="TH_178.htm" style="text-decoration:none;">Método EndForm</a></p>
+<p class=normal><a href="TH_179.htm"><img src="button.png" border=0></a><a href="TH_179.htm" style="text-decoration:none;">Método FormFind</a></p>
+<p class=normal><a href="TH_180.htm"><img src="button.png" border=0></a><a href="TH_180.htm" style="text-decoration:none;">Método FormList</a></p>
+<p class=normal><a href="TH_181.htm"><img src="button.png" border=0></a><a href="TH_181.htm" style="text-decoration:none;">Método FormUnit</a></p>
+<p class=normal><a href="TH_182.htm"><img src="button.png" border=0></a><a href="TH_182.htm" style="text-decoration:none;">Método FormTabs</a></p>
+<p class=normal><a href="TH_183.htm"><img src="button.png" border=0></a><a href="TH_183.htm" style="text-decoration:none;">Método AddField</a></p>
+<p class=normal><a href="TH_184.htm"><img src="button.png" border=0></a><a href="TH_184.htm" style="text-decoration:none;">Método AddOrder</a></p>
+<p class=normal><a href="TH_185.htm"><img src="button.png" border=0></a><a href="TH_185.htm" style="text-decoration:none;">Método AddFilter</a></p>
+<p class=normal><a href="TH_186.htm"><img src="button.png" border=0></a><a href="TH_186.htm" style="text-decoration:none;">Método AddHeader</a></p>
+<p class=normal><a href="TH_187.htm"><img src="button.png" border=0></a><a href="TH_187.htm" style="text-decoration:none;">Método AddReport</a></p>
+<p class=normal><a href="TH_188.htm"><img src="button.png" border=0></a><a href="TH_188.htm" style="text-decoration:none;">Método EmptyListMessage</a></p>
+<p class=normal><a href="TH_189.htm"><img src="button.png" border=0></a><a href="TH_189.htm" style="text-decoration:none;">Método FieldAlphabeticIndex</a></p>
+<p class=normal><a href="TH_190.htm"><img src="button.png" border=0></a><a href="TH_190.htm" style="text-decoration:none;">Método FieldTextAreaHeight</a></p>
+<p class=normal><a href="TH_191.htm"><img src="button.png" border=0></a><a href="TH_191.htm" style="text-decoration:none;">Método FieldImage</a></p>
+<p class=normal><a href="TH_192.htm"><img src="button.png" border=0></a><a href="TH_192.htm" style="text-decoration:none;">Método FieldRadioColumns</a></p>
+<p class=normal><a href="TH_193.htm"><img src="button.png" border=0></a><a href="TH_193.htm" style="text-decoration:none;">Método FieldCharCase</a></p>
+<p class=normal><a href="TH_194.htm"><img src="button.png" border=0></a><a href="TH_194.htm" style="text-decoration:none;">Método FieldDisableValue</a></p>
+<p class=normal><a href="TH_195.htm"><img src="button.png" border=0></a><a href="TH_195.htm" style="text-decoration:none;">Método FieldListSize</a></p>
+<p class=normal><a href="TH_196.htm"><img src="button.png" border=0></a><a href="TH_196.htm" style="text-decoration:none;">Método FieldListChars</a></p>
+<p class=normal><a href="TH_197.htm"><img src="button.png" border=0></a><a href="TH_197.htm" style="text-decoration:none;">Método FieldMask</a></p>
+<p class=normal><a href="TH_198.htm"><img src="button.png" border=0></a><a href="TH_198.htm" style="text-decoration:none;">Método FieldShowSize</a></p>
+<p class=normal><a href="TH_199.htm"><img src="button.png" border=0></a><a href="TH_199.htm" style="text-decoration:none;">Método FieldSepDate</a></p>
+<p class=normal><a href="TH_200.htm"><img src="button.png" border=0></a><a href="TH_200.htm" style="text-decoration:none;">Método FieldExternalLink</a></p>
+<p class=normal><a href="TH_201.htm"><img src="button.png" border=0></a><a href="TH_201.htm" style="text-decoration:none;">Método FieldInternalLink</a></p>
+<p class=normal><a href="TH_202.htm"><img src="button.png" border=0></a><a href="TH_202.htm" style="text-decoration:none;">Método FieldAddILTarget</a></p>
+<p class=normal><a href="TH_203.htm"><img src="button.png" border=0></a><a href="TH_203.htm" style="text-decoration:none;">Método FieldAddValue</a></p>
+<p class=normal><a href="TH_204.htm"><img src="button.png" border=0></a><a href="TH_204.htm" style="text-decoration:none;">Método FieldHint</a></p>
+<p class=normal><a href="TH_205.htm"><img src="button.png" border=0></a><a href="TH_205.htm" style="text-decoration:none;">Método FieldLookup</a></p>
+<p class=normal><a href="TH_206.htm"><img src="button.png" border=0></a><a href="TH_206.htm" style="text-decoration:none;">Método FieldLookupFilter</a></p>
+<p class=normal><a href="TH_207.htm"><img src="button.png" border=0></a><a href="TH_207.htm" style="text-decoration:none;">Método FieldDoubleValidate</a></p>
+<p class=normal><a href="TH_208.htm"><img src="button.png" border=0></a><a href="TH_208.htm" style="text-decoration:none;">Método FieldIsUnique</a></p>
+<p class=normal><a href="TH_209.htm"><img src="button.png" border=0></a><a href="TH_209.htm" style="text-decoration:none;">Método CreateTable</a></p>
+<p class=normal><a href="TH_210.htm"><img src="button.png" border=0></a><a href="TH_210.htm" style="text-decoration:none;">Método DropTable</a></p>
+<p class=normal><a href="TH_211.htm"><img src="button.png" border=0></a><a href="TH_211.htm" style="text-decoration:none;">Método CreateIndex</a></p>
+<p>
+</body>
+</html>

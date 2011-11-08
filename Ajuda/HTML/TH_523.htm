@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>Objeto Upload</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_522.htm">previous</a> &nbsp; <a href="TH_524.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=objetos>Objeto Upload</p>
+<p class=objetos-p>&nbsp;</p>
+<p class=normal>Objeto que realiza o <i>upload</i> de um arquivo enviado atrav&#233;s do protocolo HTTP utilizando o m&#233;todo &#8220;post&#8221;. </p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Set <i>Upload</i> = Server.CreateObject(&#8220;HiperTools30.Upload&#8221;)</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O formul&#225;rio que for enviar o arquivo deve ser constru&#237;do utilizando o "multipart/form-data" como forma de codifica&#231;&#227;o dos dados enviados, como exemplificado abaixo atrav&#233;s do m&#233;todo <i>EncType</i> do objeto <i>Form</i>.</p>
+<p class=normal>O que permitir&#225; ao usu&#225;rio enviar os arquivos para <i>upload</i> ser&#227;o os &#8220;inputs&#8221; do tipo <i>file</i> adicionados ao formul&#225;rio. Quando um &#8220;input&#8221; do tipo <i>file</i> &#233; adicionado ao formul&#225;rio o navegador desenha uma caixa de edi&#231;&#227;o ao lado do bot&#227;o de procura, este bot&#227;o ser&#225; utilizado para que o usu&#225;rio possa selecionar o nome do arquivo que ser&#225; enviado.</p>
+<p class=normal>&#201; necess&#225;rio que se defina o tipo de envio dos dados do formul&#225;rio como &#8220;post&#8221; e de forma alguma utilizando o m&#233;todo &#8220;get&#8221;, como exemplificado abaixo atrav&#233;s do m&#233;todo <i>BeginForm</i> do objeto Form</p>
+<p class=normal>Quando o objeto <i>Upload</i> &#233; criado l&#234; os dados enviados atrav&#233;s do protocolo HTTP no instante de sua cria&#231;&#227;o. Quando um objeto <i>Upload</i> &#233; criado o conte&#250;do da resposta HTTP &#233; totalmente limpo e armazenado dentro do objeto, portanto, para acessar o conte&#250;do de outros dados do formul&#225;rio enviado ser&#225; necess&#225;rio que se utilize a propriedade <i>Form</i> ou a propriedade <i>Items</i> do objeto <i>Upload</i>.</p>
+<p class=normal>O c&#243;digo abaixo ilusta como obter o objeto <i>Upload</i> e como utilizar alguma de suas propriedades e m&#233;todos. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&lt;%@ LANGUAGE="VBSCRIPT" %&gt;</p>
+<p class=normal>&lt;!--#INCLUDE VIRTUAL="/HiperTools/All2.inc"--&gt;</p>
+<p class=normal>&lt;!--#INCLUDE VIRTUAL="/HiperTools/Objetcs.inc"--&gt;</p>
+<p class=normal>&lt;%</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM  /UploadAction.asp</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM  Descricao   : Sistema de upload utilizando o HiperTools 3.0</p>
+<p class=normal>REM  Cria&#231;&#227;o     : 12:00h 15/11/99</p>
+<p class=normal>REM  Local       : Bras&#237;lia/DF</p>
+<p class=normal>REM  Elaborado   : Jos&#233; da Silva</p>
+<p class=normal>REM  Versao      : 1.0.0</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=preformatted>&nbsp;</p>
+<p class=normal>  ' Executa o procedimento principal do sistema</p>
+<p class=normal>  MainBody</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Mostra a p&#225;gina inicial do sistema</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub ShowFirstPage</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  ' O &#8220;EncType&#8221; do formul&#225;rio deve ser igual a &#8220;multipart/form-data&#8221;</p>
+<p class=normal>  Form.EncType = "multipart/form-data"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  ' Inicializa o formul&#225;rio de Upload onde o usu&#225;rio entra com o nome e pode </p>
+<p class=normal>  ' enviar at&#233; dois arquivos de uma vez. </p>
+<p class=normal>  Form.BeginForm Initializer.ScriptName &amp; "?DoUpload=True", "frmUpload"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Campo onde o usu&#225;rio entrar&#225; com sua identifica&#231;&#227;o</p>
+<p class=normal>    Show.HTML "Autor&lt;BR&gt;"</p>
+<p class=normal>    Form.Input "", "txtAuthor"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Permite ao usu&#225;rio escolher o primeiro arquivo a enviar</p>
+<p class=normal>    Show.Message "Arquivo 1&lt;BR&gt;"</p>
+<p class=normal>    Form.Input "file", "txtFileName1"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Permite ao usu&#225;rio escolher o segundo arquivo a enviar</p>
+<p class=normal>    Show.Message "Arquivo 2&lt;BR&gt;"</p>
+<p class=normal>    Form.Input "file", "txtFileName2"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Adiciona o bot&#227;o de envio </p>
+<p class=normal>    Show.BR</p>
+<p class=normal>    Form.Submit "Submit", <i>Upload</i></p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  ' Finaliza o formu&#225;rio </p>
+<p class=normal>  Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim de ShowFirstPage</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Realiza o Upload</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub DoUpload</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  ' S&#243; &#233; poss&#237;vel realizar o upload utilizando-se do m&#233;todo &#8220;post&#8221;</p>
+<p class=normal>  If Request.ServerVariables("REQUEST_METHOD")= &#8220;post&#8221; Then</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Cria o objeto de upload</p>
+<p class=normal>    Dim Upload, Index</p>
+<p class=normal>    Set Upload = Server.CreateObject("HiperTools30.Upload")</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Mostra o cont&#233;udo do formul&#225;rio que foi enviado</p>
+<p class=normal>    Show.Message "&lt;H3&gt;Conte&#250;do do formul&#225;rio&lt;/H3&gt;"</p>
+<p class=normal>    For Index = 1 to Upload.FormCount</p>
+<p class=normal>      If (Not Upload.Form(Index).IsFile) Then</p>
+<p class=normal>        Show.Message Upload.Form(Index).Name &amp; "=" &amp; Upload.Form(Index)</p>
+<p class=normal>      End If</p>
+<p class=normal>    Next</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Mostra as informa&#231;&#245;es dos arquivos enviados</p>
+<p class=normal>    Show.Message "&lt;H3&gt;Informa&#231;&#245;es dos arquivos&lt;/H3&gt;"</p>
+<p class=normal>    For Index = 1 to Upload.FormCount</p>
+<p class=normal>      If (Upload.Form(Index).IsFile) Then</p>
+<p class=normal>        Show.Message Upload.Form(Index).Name &amp; "=" &amp; _</p>
+<p class=normal>                     Upload.Form(Index).UserFilename &amp; "=" &amp; _</p>
+<p class=normal>                     Upload.Form(Index).TotalBytes &amp; "=" &amp; _</p>
+<p class=normal>                     Upload.Form(Index).ServerName &amp; "=" &amp; _</p>
+<p class=normal>      End If</p>
+<p class=normal>    Next</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Configura o comportamento do objeto</p>
+<p class=normal>    Upload.MaxBytes<b>       = </b>15360</p>
+<p class=normal>    Upload.OverwriteFiles<b> = </b>True</p>
+<p class=normal>    Upload.Path           <b>= </b>"c:\inertpub\wwwroot\XYZ\upload"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Salva o primeiro arquivo enviado</p>
+<p class=normal>    Upload.SaveAs File.ExtractFileName(Upload.ServerName)</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Salva o segundo arquivo enviado</p>
+<p class=normal>    Upload.Items("txtFileName2").SaveAs _</p>
+<p class=normal>           File.ExtractFileName(Upload.Items("txtFileName2").ServerName)</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Destr&#243;i o objeto de upload</p>
+<p class=normal>    Set Upload = Nothing</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  End If</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim de ShowFirstPage</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Corpo Principal do sistema</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub MainBody</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  ' Inicializa o HTML</p>
+<p class=normal>  Default.HTMLBegin</p>
+<p class=normal>  Default.HeadAll &#8220;Upload&#8221;</p>
+<p class=normal>  Default.BodyBegin</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Se o usu&#225;rio j&#225; envio os arquivos para upload</p>
+<p class=normal>    If Request.QueryString("DoUpload")= <i>verdadeiro</i> Then</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>       ' Realiza o upload</p>
+<p class=normal>       DoUpload</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    ' Sen&#227;o</p>
+<p class=normal>    Else</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>       ' Mostra um formul&#225;rio que permite ao usu&#225;rio enviar os arquivos</p>
+<p class=normal>       ShowFirstPage</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    End If</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  ' Finaliza o HTML</p>
+<p class=normal>  Default.BodyEnd</p>
+<p class=normal>  Default.HTMLEnd</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim do MainBody</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim do UploadAction.asp</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>%&gt;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Objeto UploadItems, Objeto UploadItem.</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_524.htm"><img src="button.png" border=0></a><a href="TH_524.htm" style="text-decoration:none;">Coleções Form</a></p>
+<p class=normal><a href="TH_525.htm"><img src="button.png" border=0></a><a href="TH_525.htm" style="text-decoration:none;">Coleções Items</a></p>
+<p class=normal><a href="TH_526.htm"><img src="button.png" border=0></a><a href="TH_526.htm" style="text-decoration:none;">Propriedade MaxBytes</a></p>
+<p class=normal><a href="TH_527.htm"><img src="button.png" border=0></a><a href="TH_527.htm" style="text-decoration:none;">Propriedade OverwriteFiles</a></p>
+<p class=normal><a href="TH_528.htm"><img src="button.png" border=0></a><a href="TH_528.htm" style="text-decoration:none;">Propriedade Path</a></p>
+<p class=normal><a href="TH_529.htm"><img src="button.png" border=0></a><a href="TH_529.htm" style="text-decoration:none;">Propriedade ServerName</a></p>
+<p class=normal><a href="TH_530.htm"><img src="button.png" border=0></a><a href="TH_530.htm" style="text-decoration:none;">Método Save</a></p>
+<p class=normal><a href="TH_531.htm"><img src="button.png" border=0></a><a href="TH_531.htm" style="text-decoration:none;">Método SaveAs</a></p>
+<p>
+</body>
+</html>

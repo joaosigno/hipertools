@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Método BeginURL</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_553.htm">previous</a> &nbsp; <a href="TH_555.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo BeginURL</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Inicia a cria&#231;&#227;o de uma URL ou uma sequ&#234;ncia de URL's que ser&#227;o direcinadas para o mesmo local (HREF).</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>BeginURL</b><i> </i>[ <i>String </i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.60417in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.60417in">Requerido. Sempre ter&#225; que ser um objeto <i>URL</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String</i></td>
+<td class=footer style="width: 3.60417in">Opcional. <i>String </i>&#233; o nome do arquivo que ser&#225; referenciado pelo HREF. Se n&#227;o for indicado, o objeto vai utilizar o nome do arquivo atual (<i>Initializer.ScriptName</i>).</td>
+</tr>
+</table>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>BeginURL</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>URL.<b>BeginURL</b> Initializer.ScriptName</p>
+<p class=normal>URL.Add efQueryStrAction, efQSActionSummary</p>
+<p class=normal>URL.Add efQueryStrWhat, conWhatChamaTecnico</p>
+<p class=normal>URL.Show "Relat&#243;rio por Setor", URL.Equal(efQueryStrList, 1)</p>
+<p class=normal>Show.BR</p>
+<p class=normal>URL.Show "Relat&#243;rio por Usu&#225;rio", URL.Equal(efQueryStrList, 2)</p>
+<p class=normal>Show.BR</p>
+<p class=normal>URL.EndURL</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>URL</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_555.htm"><img src="button.png" border=0></a><a href="TH_555.htm" style="text-decoration:none;">Método EndURL</a></p>
+<p>
+</body>
+</html>

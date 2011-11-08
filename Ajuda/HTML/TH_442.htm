@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Método GraphLegend</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_441.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo GraphLegend</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Define o valor das propriedades <i>GraphMax</i> e <i>GraphTotal</i> e exibe a legenda, indicando o valor m&#233;dio e m&#225;ximo dos gr&#225;ficos de barra.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>GraphLegend</b> <i>Double1</i>, <i>Double2</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Table.</i></td>
+</tr>
+<tr>
+<td class=normal><i>Double1</i></td>
+<td class=footer>Requerido. Valor m&#225;ximo que ocorre nos gr&#225;ficos.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Double2</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Valor total, resultado da soma dos valores de todos os gr&#225;ficos.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>GraphLegend</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Table.BeginTable "75%", "Exemplo de grafico", 2, True</p>
+<p class=normal>Table.BeginRow 1, True</p>
+<p class=normal>   Table.Cell "Nomes"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Table.<b>GraphLegend</b> dblMax, dblTotal</p>
+<p class=normal>Table.EndRow</p>
+<p class=normal>Do Until sobjRS.EOF</p>
+<p class=normal>Table.BeginRow 1</p>
+<p class=normal>Table.Cell sobjRS("Nome")</p>
+<p class=normal>Table.CellGraph sobjRS("Valor")</p>
+<p class=normal>Table.EndRow</p>
+<p class=normal>    sobjRS.MoveNext</p>
+<p class=normal>   Loop</p>
+<p class=normal>   Table.BeginRow 1, True</p>
+<p class=normal>   Table.Cell "Total Geral"</p>
+<p class=normal>   Table.Cell String.FormatMoney(dblTotal)</p>
+<p class=normal>   Table.EndRow</p>
+<p class=normal>   Table.EndTable</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Table</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>&nbsp;</p>
+<p class=heading-1-p>&nbsp;</p>
+<p>
+</body>
+</html>

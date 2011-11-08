@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Método DataIndexClustered</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_175.htm">previous</a> &nbsp; <a href="TH_177.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo DataIndexClustered</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Defini&#231;&#227;o do &#237;ndice clustered que ser&#225; criados para a tabela. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>DataIndexClustered</b><i> String1, String2</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome v&#225;lido para o arquivo de &#237;ndice clustered.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String2</i></td>
+<td class=normal style="width: 3.41667in">Requerido. Coluna ou as colunas, separadas por v&#237;rgulas,  que ser&#227;o utilizadas no &#237;ndice.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>DataIndexClustered</b></p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataTable&nbsp;"sncChamaTecnico"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;efDataTypeInt,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4",&nbsp;efRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtSolicitante",&nbsp;&nbsp;efDataTypeVarChar,&nbsp;"100",&nbsp;efRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;efDataTypeVarChar,&nbsp;&nbsp;"50",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtDataSolicita",&nbsp;efDataTypeDateTime,&nbsp;"10",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddField&nbsp;"chtHoraSolicita",&nbsp;efDataTypeVarChar,&nbsp;&nbsp;&nbsp;"5",&nbsp;efNotRequired</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddPrimaryKey&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddRelation&nbsp;"sncSolicitantes",&nbsp;efRelIntegrCascade,&nbsp;_<br>
+&nbsp;&nbsp;efRelIntegrCascade,&nbsp;efRelType1to1</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddRelationFields&nbsp;"chtSolicitante",&nbsp;"cliCodigo"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.DataAddIndex&nbsp;"Solicitante",&nbsp;"chtSolicitante,&nbsp;chtSetor"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>DataIndexClustered</b><i>&nbsp;</i>"Setor",&nbsp;"chtSetor"</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>DataTable, DataAddPrimaryKey, DataAddRelation</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_177.htm"><img src="button.png" border=0></a><a href="TH_177.htm" style="text-decoration:none;">Método BeginForm</a></p>
+<p>
+</body>
+</html>

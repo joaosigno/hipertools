@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Método AddOrder</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_183.htm">previous</a> &nbsp; <a href="TH_185.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo AddOrder</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Adiciona uma forma de ordena&#231;&#227;o &#224; tabela apresentada pelo formul&#225;rio definido. Deve ser usado no escopo do BeginForm, EndForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>AddOrder </b><i>String</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String</i></td>
+<td class=normal style="width: 3.41667in">Requerido. Nome do campo definido com o DataAddField com qual se ordena a listagem.</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>AddOrder</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Edit.BeginForm&nbsp;"sncChamaTecnico",&nbsp;"Chamado&nbsp;T&#233;cnico",&nbsp;1,&nbsp;sparEditWhat,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;efValLocClient</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormUnit&nbsp;"chtSolicitante|chtSetor,chtDataSolicita,chtHoraSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormTabs&nbsp;"Solicitante|Setor"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormList&nbsp;"chtSolicitante,chtSetor,chtDataSolicita&#8221;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FormFind&nbsp;"chtSolicitante,chtSetor,chtDataSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.AddReport&nbsp;"chtSetor,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Setor",&nbsp;conListSetor</p>
+<p class=preformatted>Edit.AddReport&nbsp;"chtSolicitante,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Usu&#225;rio",&nbsp;conListUsuario</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"&amp;C&#243;digo",&nbsp;&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;efNext</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtSolicitante",&nbsp;&nbsp;"&amp;Solicitante"</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"S&amp;etor"</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtDataSolicita",&nbsp;"&amp;Data",&nbsp;efFldTypeText,&nbsp;efValOptDate,&nbsp;,&nbsp;_</p>
+<p class=preformatted>String.LongDate(Now)</p>
+<p class=preformatted>Edit.AddField<b>&nbsp;</b>"chtHoraSolicita",&nbsp;"&amp;Hor&#225;rio",&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;_</p>
+<p class=preformatted>String.LeadingZeroes(Hour(Now),&nbsp;2)&nbsp;&amp;&nbsp;":"&nbsp;&amp;&nbsp;&nbsp;String.LeadingZeroes(Minute(Now),&nbsp;2)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.FieldInternalLink&nbsp;"chtSolicitante",&nbsp;sparEditWhat,&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;&nbsp;</p>
+<p class=preformatted>Edit.<b>AddOrder</b>&nbsp;"chtCodigo"</p>
+<p class=preformatted>Edit.<b>AddOrder</b>&nbsp;"chtSetor"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.EndForm</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>BeginForm, EndForm, ListSetOfOrdersCaption, ShowSetOfOrdersLink</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_185.htm"><img src="button.png" border=0></a><a href="TH_185.htm" style="text-decoration:none;">Método AddFilter</a></p>
+<p>
+</body>
+</html>

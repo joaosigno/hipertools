@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Propriedade DBQ</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_42.htm">previous</a> &nbsp; <a href="TH_44.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade DBQ</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=heading-1>Espec&#237;fica o diret&#243;rio onde est&#225; o arquivo que ser&#225; utilizado pelo o ODBC.</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>DBQ</b> [= <i>String</i> ] </p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto <i>Connection</i>. O valor para <b>DBQ</b> dever&#225; ser um diret&#243;rio v&#225;lido com o nome de arquivo de acordo com o driver utilizado.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>DBQ</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Connection.ConnectionType    = conConnAccess</p>
+<p class=normal>Connection.<b>DBQ</b>               = Initializer.SiteRootDir &amp; "Data\Databas.mdb"</p>
+<p class=normal>Connection.DefaultDir        = "c:\temp"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Show.Message Connection.Connection</p>
+<p class=normal>Retorna: "DRIVER={Microsoft Access Driver (*.mdb)};" _ </p>
+<p class=normal>         "DBQ=d:\inetpub\wwwroot\Data\Databas.mdb;DefaultDir=c:\temp;"</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Connection</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>ConnectionType, Database, ServerAddress</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_44.htm"><img src="button.png" border=0></a><a href="TH_44.htm" style="text-decoration:none;">Propriedade DefaultDir</a></p>
+<p>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>Objeto TreeView</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_486.htm">previous</a> &nbsp; <a href="TH_488.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=objetos>Objeto TreeView</p>
+<p class=objetos-p>&nbsp;</p>
+<p class=normal>Objeto &#233; utilizado para apresentar uma lista hierarquica de itens, como um indice de um livro ou a estrutura de diret&#243;rios de um disco.</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Set TreeView = Server.CreateObject("HiperTools30.TreeView")</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do objeto <b>TreeView</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&lt;%@ LANGUAGE="VBSCRIPT" %&gt;</p>
+<p class=normal>&lt;!--#INCLUDE VIRTUAL="/hipertools30site/Objects.inc"--&gt;</p>
+<p class=normal>&lt;!--#INCLUDE VIRTUAL="/hipertools30site/Constants.inc"--&gt;</p>
+<p class=normal>&lt;%</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM /TreeView.asp</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Nome     : Sistema de teste do TreeView</p>
+<p class=normal>REM Autor    : Jos&#233; da Silva</p>
+<p class=normal>REM Versao   : 1.0.0</p>
+<p class=normal>REM Local    : Bras&#237;lia - DF</p>
+<p class=normal>REM Companhia: XYZ Software</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Main</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Rotina Principal do Sistema</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub Main</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Server.ScriptTimeOut = conScriptTimeout</p>
+<p class=normal>  Session.TimeOut      = conSessionTimeout</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  MainBody</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim Main</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Monta o Menu em Tree-View</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Sub ShowTreeViewMenu</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Session("htDefaultHiperToolsWorkPath") = "/ZTITools"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  strSA = "ScriptAction.asp"</p>
+<p class=normal>  TreeView.DefaultImage     = "Folder"</p>
+<p class=normal>  TreeView.TreeStyleLink    = "font-style: normal; text-decoration: none;" _</p>
+<p class=normal>                              " color:blue"</p>
+<p class=normal>  TreeView.TreeStyleActive  = "font-style: normal; text-decoration: none; " _</p>
+<p class=normal>                              " color:red"</p>
+<p class=normal>  TreeView.TreeStyleVisited = "font-style: normal; text-decoration: none; " _</p>
+<p class=normal>                              " color:blue"</p>
+<p class=normal>  TreeView.TreeStyleHover   = "font-style: normal; text-decoration: " _</p>
+<p class=normal>                              " underline;color:red"</p>
+<p class=normal>  TreeView.ItemTarget       = "Body"</p>
+<p class=normal>  TreeView.ItemMaxSize      = 15</p>
+<p class=normal>  TreeView.ItemNoWrap       = True</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  TreeView.AddImage "Folder", "/HiperTools/Img/Folder/"</p>
+<p class=normal>  TreeView.AddImage "User", "/HiperTools/Img/Folder/", "aberto", "fechado"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  TreeView.BeginTree</p>
+<p class=normal>    TreeView.AddItem "1&#186; item", "ScriptAction.asp?Action=1", "A&#231;&#227;o 1", "User"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    TreeView.BeginNode "1&#186; n&#243;", "ScriptAction.asp?Action=2", , , True</p>
+<p class=normal>      TreeView.AddItem "1&#186; item do 1&#186; n&#243;", "ScriptAction.asp?Action=3"</p>
+<p class=normal>      TreeView.AddItem "2&#186; item do 1&#186; n&#243;", "ScriptAction.asp?Action=4"</p>
+<p class=normal>      TreeView.AddSubCaption "1&#186; t&#237;tulo auxiliar do 2&#186; item do 1&#186; n&#243;", _</p>
+<p class=normal>                             "ScriptAction.asp?Action=5", , _</p>
+<p class=normal>                             TreeView.ItemTarget</p>
+<p class=normal>    TreeView.EndNode</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    TreeView.BeginNode "2&#186; n&#243;", "ScriptAction.asp?Action=6", _ </p>
+<p class=normal>                       "Este &#233; o valor da propriedade &#8216;Title&#8217;&#8221;</p>
+<p class=normal>      TreeView.AddItem "1&#186; item do 2&#186; n&#243;"</p>
+<p class=normal>    TreeView.EndNode</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    TreeView.AddItem "2&#186; item", "ScriptAction.asp?Action=6"</p>
+<p class=normal>  TreeView.EndTree</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim ShowTreeViewMenu</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Corpo Principal do sistema</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub MainBody</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Default.HTMLBegin</p>
+<p class=normal>  Show.HTML "&lt;TITLE&gt;Menu do ZEUS III v1.0&lt;/TITLE&gt;"</p>
+<p class=normal>  Show.HTML "&lt;BODY&gt;"</p>
+<p class=normal>  Show.HTML "&lt;BASEFONT FACE=""Arial, Helvetica, Sans-Serif""&gt;"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  'Chama o Menu no Tree View</p>
+<p class=normal>  ShowTreeViewMenu</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Show.HTML "&lt;/BODY&gt;"</p>
+<p class=normal>  Default.HTMLEnd</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim MainBody</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim do TreeView.asp</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>%&gt;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_488.htm"><img src="button.png" border=0></a><a href="TH_488.htm" style="text-decoration:none;">Propriedade DefaultImage</a></p>
+<p class=normal><a href="TH_489.htm"><img src="button.png" border=0></a><a href="TH_489.htm" style="text-decoration:none;">Propriedade ItemBGColor</a></p>
+<p class=normal><a href="TH_490.htm"><img src="button.png" border=0></a><a href="TH_490.htm" style="text-decoration:none;">Propriedade ItemFontColor</a></p>
+<p class=normal><a href="TH_491.htm"><img src="button.png" border=0></a><a href="TH_491.htm" style="text-decoration:none;">Propriedade ItemFontFace</a></p>
+<p class=normal><a href="TH_492.htm"><img src="button.png" border=0></a><a href="TH_492.htm" style="text-decoration:none;">Propriedade ItemFontSize</a></p>
+<p class=normal><a href="TH_493.htm"><img src="button.png" border=0></a><a href="TH_493.htm" style="text-decoration:none;">Propriedade ItemBold</a></p>
+<p class=normal><a href="TH_494.htm"><img src="button.png" border=0></a><a href="TH_494.htm" style="text-decoration:none;">Propriedade ItemItalic</a></p>
+<p class=normal><a href="TH_495.htm"><img src="button.png" border=0></a><a href="TH_495.htm" style="text-decoration:none;">Propriedade ItemUnderline</a></p>
+<p class=normal><a href="TH_496.htm"><img src="button.png" border=0></a><a href="TH_496.htm" style="text-decoration:none;">Propriedade ItemNoWrap</a></p>
+<p class=normal><a href="TH_497.htm"><img src="button.png" border=0></a><a href="TH_497.htm" style="text-decoration:none;">Propriedade ItemHAlign</a></p>
+<p class=normal><a href="TH_498.htm"><img src="button.png" border=0></a><a href="TH_498.htm" style="text-decoration:none;">Propriedade ItemVAlign</a></p>
+<p class=normal><a href="TH_499.htm"><img src="button.png" border=0></a><a href="TH_499.htm" style="text-decoration:none;">Propriedade ItemTarget</a></p>
+<p class=normal><a href="TH_500.htm"><img src="button.png" border=0></a><a href="TH_500.htm" style="text-decoration:none;">Propriedade ItemWidth</a></p>
+<p class=normal><a href="TH_501.htm"><img src="button.png" border=0></a><a href="TH_501.htm" style="text-decoration:none;">Propriedade ItemHeight</a></p>
+<p class=normal><a href="TH_502.htm"><img src="button.png" border=0></a><a href="TH_502.htm" style="text-decoration:none;">Propriedade TreeBGColor</a></p>
+<p class=normal><a href="TH_503.htm"><img src="button.png" border=0></a><a href="TH_503.htm" style="text-decoration:none;">Propriedade ItemMaxSize</a></p>
+<p class=normal><a href="TH_504.htm"><img src="button.png" border=0></a><a href="TH_504.htm" style="text-decoration:none;">Propriedade ItemStyle</a></p>
+<p class=normal><a href="TH_505.htm"><img src="button.png" border=0></a><a href="TH_505.htm" style="text-decoration:none;">Propriedade TreeStyleLink</a></p>
+<p class=normal><a href="TH_506.htm"><img src="button.png" border=0></a><a href="TH_506.htm" style="text-decoration:none;">Propriedade TreeStyleActive</a></p>
+<p class=normal><a href="TH_507.htm"><img src="button.png" border=0></a><a href="TH_507.htm" style="text-decoration:none;">Propriedade TreeStyleVisited</a></p>
+<p class=normal><a href="TH_508.htm"><img src="button.png" border=0></a><a href="TH_508.htm" style="text-decoration:none;">Propriedade TreeStyleHover</a></p>
+<p class=normal><a href="TH_509.htm"><img src="button.png" border=0></a><a href="TH_509.htm" style="text-decoration:none;">Propriedade CurrentChild</a></p>
+<p class=normal><a href="TH_510.htm"><img src="button.png" border=0></a><a href="TH_510.htm" style="text-decoration:none;">Propriedade SetLevelID</a></p>
+<p class=normal><a href="TH_511.htm"><img src="button.png" border=0></a><a href="TH_511.htm" style="text-decoration:none;">Propriedade GetLevelID</a></p>
+<p class=normal><a href="TH_512.htm"><img src="button.png" border=0></a><a href="TH_512.htm" style="text-decoration:none;">Propriedade IsLevelID</a></p>
+<p class=normal><a href="TH_513.htm"><img src="button.png" border=0></a><a href="TH_513.htm" style="text-decoration:none;">Propriedade ItemHaveMore</a></p>
+<p class=normal><a href="TH_514.htm"><img src="button.png" border=0></a><a href="TH_514.htm" style="text-decoration:none;">Propriedade ItemState</a></p>
+<p class=normal><a href="TH_515.htm"><img src="button.png" border=0></a><a href="TH_515.htm" style="text-decoration:none;">Método BeginTree</a></p>
+<p class=normal><a href="TH_516.htm"><img src="button.png" border=0></a><a href="TH_516.htm" style="text-decoration:none;">Método EndTree</a></p>
+<p class=normal><a href="TH_517.htm"><img src="button.png" border=0></a><a href="TH_517.htm" style="text-decoration:none;">Método BeginNode</a></p>
+<p class=normal><a href="TH_518.htm"><img src="button.png" border=0></a><a href="TH_518.htm" style="text-decoration:none;">Método EndNode</a></p>
+<p class=normal><a href="TH_519.htm"><img src="button.png" border=0></a><a href="TH_519.htm" style="text-decoration:none;">Método AddItem</a></p>
+<p class=normal><a href="TH_520.htm"><img src="button.png" border=0></a><a href="TH_520.htm" style="text-decoration:none;">Método AddSubCaption</a></p>
+<p class=normal><a href="TH_521.htm"><img src="button.png" border=0></a><a href="TH_521.htm" style="text-decoration:none;">Método AddImage</a></p>
+<p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Propriedade ConnectionTimeout</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_39.htm">previous</a> &nbsp; <a href="TH_41.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade ConnectionTimeout</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Espec&#237;fica tempo m&#225;ximo da conex&#227;o com o servidor de Banco de Dados em segundos.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>ConnectionTimeout</b> [= <i>Integer</i> ] </p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto <i>Connection</i>. O valor para <b>ConnectionTimeout</b> &#233; o n&#250;mero de segundos que ser&#225; o tempo m&#225;ximo da conex&#227;o.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>ConnectionTimeout</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Connection.CommandTimeout    = 300</p>
+<p class=normal>Connection.<b>ConnectionTimeout</b> = 300</p>
+<p class=normal>Connection.ConnectionType    = conConnSQL</p>
+<p class=normal>Connection.Database          = "SQLDatabase"</p>
+<p class=normal>Connection.UserID            = "Usuario"</p>
+<p class=normal>Connection.Password          = "Senha"</p>
+<p class=normal>Connection.ServerAddress     = "ServidorSQL"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Show.Message Connection.ConnectionString</p>
+<p class=normal>Retorna: "DRIVER={SQL Server};SERVER=ServidorSQL;UID=Usuario;PWD=Senha ;DATABASE=SQLDatabase;"</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Connection</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>CommandTimeout, ConnectionString</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_41.htm"><img src="button.png" border=0></a><a href="TH_41.htm" style="text-decoration:none;">Propriedade ConnectionType</a></p>
+<p>
+</body>
+</html>

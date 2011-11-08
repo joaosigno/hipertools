@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Propriedade ItemTarget</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_498.htm">previous</a> &nbsp; <a href="TH_500.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade ItemTarget</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Espec&#237;fica qual &#233; o alvo (target) para os  pr&#243;ximos itens adicionados.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b> ItemTarget</b> [<i>= String</i>]<i> </i></p>
+<p class=normal>O argumento <i>objeto</i> sempre ser&#225; o objeto TreeView. O valor para <b>ItemTarget</b> indica o alvo para os  pr&#243;ximos itens adicionados.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso da propriedade <b>ItemTarget</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>TreeView.BeginTree</p>
+<p class=normal>  TreeView.<b>ItemTarget</b> = "FrameBotom"</p>
+<p class=normal>  TreeView.AddItem "1&#186; item no (Bottom)", "ScriptAction.asp?Action=1"</p>
+<p class=normal>  TreeView.<b>ItemTarget</b> = "FrameTop"</p>
+<p class=normal>  TreeView.AddItem "2&#186; item no (Top)", "ScriptAction.asp?Action=1"</p>
+<p class=normal>TreeView.EndTree</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>TreeView.</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_500.htm"><img src="button.png" border=0></a><a href="TH_500.htm" style="text-decoration:none;">Propriedade ItemWidth</a></p>
+<p>
+</body>
+</html>

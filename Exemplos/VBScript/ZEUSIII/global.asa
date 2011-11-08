@@ -1,0 +1,64 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+REM -------------------------------------------------------------------------
+REM  /Global.asa
+REM -------------------------------------------------------------------------
+REM Descricao: Controle dos objetos Application e Session
+REM Criacao  : 2/12/0 5:14PM
+REM Autor    : Zevallos Tecnologia em Informacao
+REM Versao   : 1.1.0.0
+REM Local    : Brasília - DF
+REM Companhia: 2000 by Zevallos(r) Tecnologia em Informacao
+REM -------------------------------------------------------------------------
+
+Sub Application_OnStart
+
+End Sub
+
+REM -------------------------------------------------------------------------
+Sub Application_OnEnd
+
+End Sub
+
+Sub Session_OnStart
+
+  Dim strSiteRootDir
+
+  strSiteRootDir = Request.ServerVariables( "APPL_PHYSICAL_PATH" )
+
+  Session("SourceCode") = 1
+
+  Session("Default") = ""
+
+  Session("SessionAplication") = "HiperToolsAPP"
+  Session("ConnectionTimeout") = 15
+  Session("CommandTimeout")    = 30
+
+  ' Exemplo de conexão utilizando o "MS SQLServer"
+  ' --------------------------------------------------------
+  ' Com OLEDB
+  REM Session("ConnectionString") = "Provider=sqloledb.1;Data Source=(local);UID=sa;PWD=;Catalog=DatabaseName"
+  ' Com ODBC
+  REM Session("ConnectionString") = "DRIVER={SQL Server};SERVER=(local);UID=sa;PWD=;DATABASE=DatabaseName"
+
+
+  ' Exemplo de conexão utilizando o "Excel"
+  ' --------------------------------------------------------
+  ' Com OLEDB
+  REM Session("ConnectionString") = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strSiteRootDir & "\Data\Arquivo.xls"
+  ' Com ODBC
+  REM Session("ConnectionString") = "DRIVER={Microsoft Excel Driver (*.xls)};DBQ=" & strSiteRootDir & "\Data\ChamadoTecnico.mdb;DriverID=790;FISRTROWWHASNAMES=1"
+
+  ' Exemplo de conexão utilizando o "Access"
+  ' --------------------------------------------------------
+  ' Com OLEDB
+  Session("ConnectionString") = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strSiteRootDir & "Data\ZeusIII.mdb"
+  ' Com ODBC
+  REM Session("ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=" & strSiteRootDir & "\Data\ZeusIII.mdb"
+
+end Sub
+
+REM -------------------------------------------------------------------------
+Sub Session_OnEnd
+
+End Sub
+</SCRIPT>

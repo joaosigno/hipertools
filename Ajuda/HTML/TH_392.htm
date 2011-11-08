@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Método ImportMoney</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_391.htm">previous</a> &nbsp; <a href="TH_393.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo ImportMoney</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Converte uma <i>String</i> no formato especificado para uma vari&#225;vel do tipo <i>Currency</i>.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>ImportMoney </b><i>String, Integer</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>String</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String</i></td>
+<td class=footer>Requerido. <i>String</i> com os dados a serem convertidos.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Integer</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Formato dos dados.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O formato deve ser uma das constantes a seguir:</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.9375in">Constante</td>
+<td class=heading-1 style="width: 0.6875in">Valor</td>
+<td class=heading-1 style="width: 1.875in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=footer style="width: 1.9375in">conMoneyType9999D99</td>
+<td class=normal style="width: 0.6875in">0</td>
+<td class=footer style="width: 1.875in">Formato 9999,99</td>
+</tr>
+<tr>
+<td class=footer>conMoneyType9D999D99</td>
+<td class=normal>1</td>
+<td class=footer>Formato 9.999,99</td>
+</tr>
+<tr>
+<td class=footer style="width: 1.9375in">conMoneyType9999</td>
+<td class=normal style="width: 0.6875in">2</td>
+<td class=footer style="width: 1.875in">Formato 9999</td>
+</tr>
+</table>
+</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>ImportMoney</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>strValor = &#8220;12345.54&#8221;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Response.Write String.<b>ImportMoney</b>(strValor, conMoneyType9999D99)</p>
+<p class=normal>Retorna: 12345.54</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>String</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_393.htm"><img src="button.png" border=0></a><a href="TH_393.htm" style="text-decoration:none;">Método ImportInt</a></p>
+<p>
+</body>
+</html>

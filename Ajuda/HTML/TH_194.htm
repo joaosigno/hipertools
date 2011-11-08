@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Método FieldDisableValue</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_193.htm">previous</a> &nbsp; <a href="TH_195.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo FieldDisableValue</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define as formas de desabilita&#231;&#227;o de um campo. Utiliza-se para fazer com que os campos se habilitem ou desabilitem autom&#225;ticamente de acordo com estados/valores entrados pelo usu&#225;rio no formul&#225;rio. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>FieldDisableValue</b> <i>String1</i>, <i>String2</i>, <i>String3</i>, <i>Boolean</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome do campo j&#225; criado utilizando o AddField.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. Nome do campo desabilitante j&#225; criado utilizando o AddField.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=normal>Requerido. Valor de desabilita&#231;&#227;o que o campo desabilitante deve conter para desabilitar o campo especificado em <i>String1</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Boolean</i></td>
+<td class=normal style="width: 3.41667in">Requerido. <i>O</i>p&#231;&#227;o de abilita&#231;&#227;o ou desabilita&#231;&#227;o para o valor. De acordo com as constantes efCond&#133;</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>FieldDisableValue</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.BeginForm&nbsp;"sncChamaTecnico",&nbsp;"Chamado&nbsp;T&#233;cnico",&nbsp;1,&nbsp;sparEditWhat,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;efValLocClient</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormUnit&nbsp;"chtSolicitante|chtSetor,chtDataSolicita,chtHoraSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormTabs&nbsp;"Solicitante|Setor"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormList&nbsp;"chtSolicitante,chtSetor,chtDataSolicita&#8221;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FormFind&nbsp;"chtSolicitante,chtSetor,chtDataSolicita"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSetor,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Setor",&nbsp;conListSetor</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddReport&nbsp;"chtSolicitante,#1(l=N&#186;,gc)",&nbsp;"Por&nbsp;Usu&#225;rio",&nbsp;conListUsuario</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtCodigo",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"&amp;C&#243;digo",&nbsp;&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;efNext</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtSolicitante",&nbsp;&nbsp;"&amp;Solicitante"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtSetor",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"S&amp;etor"</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtDataSolicita",&nbsp;"&amp;Data",&nbsp;efFldTypeText,&nbsp;efValOptDate,&nbsp;,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;String.LongDate(Now)</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.AddField&nbsp;"chtHoraSolicita",&nbsp;"&amp;Hor&#225;rio",&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;_</p>
+<p class=preformatted>&nbsp;&nbsp;String.LeadingZeroes(Hour(Now),&nbsp;2)&nbsp;&amp;&nbsp;":"&nbsp;&amp;&nbsp;&nbsp;String.LeadingZeroes(Minute(Now),&nbsp;2)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.FieldInternalLink&nbsp;"chtSolicitante",&nbsp;sparEditWhat,&nbsp;"chtCodigo"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.<b>FieldDisableValue</b>&nbsp;"chtDataSolicita",&nbsp;"chtSetor",&nbsp;21,&nbsp;efCondEnable</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;&#8216;Se&nbsp;o&nbsp;valor&nbsp;de&nbsp;chtSetor&nbsp;for&nbsp;21&nbsp;ent&#227;o&nbsp;o&nbsp;campo&nbsp;chtDataSolicita&nbsp;ser&#225;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abilitado.</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;&nbsp;Edit.EndForm</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>AddField, DataAddField, &#8220;Constantes Field Disable Condition&#8221;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_195.htm"><img src="button.png" border=0></a><a href="TH_195.htm" style="text-decoration:none;">Método FieldListSize</a></p>
+<p>
+</body>
+</html>

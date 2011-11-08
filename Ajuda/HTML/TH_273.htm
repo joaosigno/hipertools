@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>Instalação</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_272.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Instala&#231;&#227;o</p>
+<p class=normal>A instala&#231;&#227;o &#233; muito simples, sem precisar de grandes ajustes no seu computador. Basta colocar o CD-ROM e executar o SETUP.EXE.</p>
+<p class=normal>O SETUP.EXE fara boa parte do processo de instala&#231;&#227;o ser&#225; executado pelo programa de instala&#231;&#227;o e voc&#234; precisar&#225; somente configurar os diret&#243;rios onde seus sites v&#227;o funcionar no IIS/PWS.</p>
+<p class=heading-5>Necessidades m&#237;nimas recomendadas</p>
+<p class=heading-5-p>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=normal style="width: 3.44583in"><b>Hardware</b></td>
+</tr>
+<tr>
+<td class=normal style="width: 1.77222in"><b>Processador:</b><b></b></td>
+<td class=normal style="width: 1.67361in">Pentium 133</td>
+</tr>
+<tr>
+<td class=normal><b>Mem&#243;ria:</b><b></b></td>
+<td class=normal>64MB</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.77222in"><b>HD:</b><b></b></td>
+<td class=normal style="width: 1.67361in">2GB</td>
+</tr>
+</table>
+</p>
+<table cellpadding=0>
+<tr>
+<td class=normal style="width: 3.44583in"><b>Software</b></td>
+</tr>
+<tr>
+<td class=normal style="width: 1.77222in"><b>SO</b><b></b></td>
+<td class=normal style="width: 1.67361in">Windows NT 4.0 SP4 ou Windows 95/98</td>
+</tr>
+<tr>
+<td class=normal><b>HTTP Server</b><b></b></td>
+<td class=normal>IIS 4.0 ou PWS</td>
+</tr>
+<tr>
+<td class=normal><b>Componente BD</b><b></b></td>
+<td class=normal>MDAC 2.1</td>
+</tr>
+<tr>
+<td class=normal><b>MS-Access</b><b></b></td>
+</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.77222in"><b>MS-SQL</b><b></b></td>
+<td class=normal style="width: 1.67361in">6.5 SP5</td>
+</tr>
+</table>
+</p>
+<p class=heading-5>Estrutura de diret&#243;rios recomendada: </p>
+<p class=heading-5-p>&nbsp;</p>
+<p class=normal>Crie um diret&#243;rio no seu servidor HTTP (Web), com o nome HiperTools&#174; de acordo com a sua configura&#231;&#227;o. Nossa configura&#231;&#227;o tem a seguinte estrutura de diret&#243;rios:</p>
+<table cellpadding=0>
+<tr>
+<td class=normal style="width: 2.75625in"><b>Diret&#243;rio</b><b></b></td>
+<td class=heading-1 style="width: 2.75625in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 2.75625in">D:\Inetpub</td>
+<td class=footer style="width: 2.75625in">Diret&#243;rio raiz do IIS 4.0 ou PWS</td>
+</tr>
+<tr>
+<td class=normal>D:\Inetpub\wwwroot</td>
+<td class=footer>Diret&#243;rio raiz do servidor Web</td>
+</tr>
+<tr>
+<td class=normal>D:\Inetpub\wwwroot\components</td>
+<td class=normal>Diret&#243;rio para todos os componentes do servidor</td>
+</tr>
+<tr>
+<td class=normal>D:\Inetpub\wwwroot\HiperTools</td>
+<td class=normal>Diret&#243;rio para todos os arquivos do HiperTools&#174; no servidor</td>
+</tr>
+<tr>
+<td class=normal>D:\Inetpub\wwwroot\Clients</td>
+<td class=normal>Diret&#243;rio para os sites dos clientes</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.75625in">D:\Inetpub\wwwroot\Projects</td>
+<td class=normal style="width: 2.75625in">Diret&#243;rio para os sites dos projetos internos</td>
+</tr>
+</table>
+</p>
+<p class=heading-5>Arquivos copidados pelo instalador: </p>
+<p class=heading-5-p>&nbsp;</p>
+<p class=normal>Como padr&#227;o, o HiperTools&#174;  dever&#225; instalar os arquivos Include no diret&#243;rio abaixo ou equivalente, de acordo com a sua instala&#231;&#227;o do IIS/PWS.</p>
+<p class=normal>D:\Inetpub\wwwroot\HiperTools</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Cada arquivo dever&#225; ser utilizado de acordo com as necessidades durante o desenvolvimento de seus SIWs</p>
+<table cellpadding=0>
+<tr>
+<td class=normal style="width: 2.16597in"><b>Arquivo</b><b></b></td>
+<td class=heading-1 style="width: 3.24861in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 2.16597in">ADCVBS.INC</td>
+<td class=normal style="width: 3.24861in">Defini&#231;&#227;o das constantes que ser&#227;o utilizadas para com o ADO em VBScript</td>
+</tr>
+<tr>
+<td class=normal>Adoglobjavas.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes que ser&#227;o utilizadas para com o ADO em Jscript</td>
+</tr>
+<tr>
+<td class=normal>adoglobvbs.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes que ser&#227;o utilizadas para com o ADO em VBScript</td>
+</tr>
+<tr>
+<td class=normal>adojavas.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes que ser&#227;o utilizadas para com o ADO em Jscript</td>
+</tr>
+<tr>
+<td class=normal>adovbs.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes que ser&#227;o utilizadas para com o ADO em VBScript</td>
+</tr>
+<tr>
+<td class=normal>Connection.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto Connection em VBScript</td>
+</tr>
+<tr>
+<td class=normal>ConnectionJS.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto Connection em Jscript</td>
+</tr>
+<tr>
+<td class=normal>EditForm.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto EditForm, em VBScript</td>
+</tr>
+<tr>
+<td class=normal>EditFormJS.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto EditForm, em Jscript</td>
+</tr>
+<tr>
+<td class=normal>FormatTable.inc</td>
+<td class=normal>Formata&#231;&#227;o b&#225;sica das tabelas utilizando o objeto TableStyle, em VBScript</td>
+</tr>
+<tr>
+<td class=normal>FormatTableJS.in</td>
+<td class=normal>Formata&#231;&#227;o b&#225;sica das tabelas utilizando o objeto TableStyle em Jscript</td>
+</tr>
+<tr>
+<td class=normal>HiperTools30.inc</td>
+<td class=normal>Defini&#231;&#227;o de constantes b&#225;sicas, chamadas de outros includes para o uso gen&#233;rico do HiperTools em VBScript</td>
+</tr>
+<tr>
+<td class=normal>HiperTools30JS.inc</td>
+<td class=normal>Defini&#231;&#227;o de constantes b&#225;sicas, chamadas de outros includes para o uso gen&#233;rico do HiperTools em Jscript</td>
+</tr>
+<tr>
+<td class=normal>Objects.inc</td>
+<td class=normal>Cria&#231;&#227;o dos principais objetos do HiperTools, que poder&#227;o ser utilizados em seu c&#243;digo, em VBScript</td>
+</tr>
+<tr>
+<td class=normal>ObjectsJS.inc</td>
+<td class=normal>Cria&#231;&#227;o dos principais objetos do HiperTools, que poder&#227;o ser utilizados em seu c&#243;digo, em Jscript</td>
+</tr>
+<tr>
+<td class=normal>Registry.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto Registry, em VBScript</td>
+</tr>
+<tr>
+<td class=normal>Show.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto Show, em Jscript</td>
+</tr>
+<tr>
+<td class=normal>ShowJS.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto Show, em Jscript</td>
+</tr>
+<tr>
+<td class=normal>String.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto String, em Jscript</td>
+</tr>
+<tr>
+<td class=normal>StringJS.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto String, em Jscript</td>
+</tr>
+<tr>
+<td class=normal>Table.inc</td>
+<td class=normal>Defini&#231;&#227;o das constantes utilizadas com o objeto Table, em Jscript</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.16597in">TableJS.inc</td>
+<td class=normal style="width: 3.24861in">Defini&#231;&#227;o das constantes utilizadas com o objeto Table, em Jscript</td>
+</tr>
+</table>
+</p>
+<p class=heading-5>Atualizando o HiperTools&#174; v3.0: </p>
+<p class=heading-5-p>&nbsp;</p>
+<p class=normal>Para atualizar o HiperTools&#174; voc&#234; ter&#225; 2 formas:</p>
+<p class=normal>1 &#8211; Utilizando o programa de atualiza&#231;&#227;o, muito similar com o de instala&#231;&#227;o;</p>
+<p class=normal>2 &#8211; Fazendo o registro do componente manualmente.</p>
+<p class=normal>Esta parte explica como fazer a atualiza&#231;&#227;o do HiperTools&#174; manualmente.</p>
+<p class=normal>No prompt do DOS, v&#225; no diret&#243;rio do HiperTools&#174; e procure o arquivos HIPERTOOLS30.DLL e digite o comando abaixo, que o registro do HiperTools&#174; ser&#225; cancelado. Para executar esta tarefa, o seu servidor IIS/PWS precisar&#225; estar completamente parado.</p>
+<p class=header>REGSVR32 /u HIPERTOOLS30.DLL</p>
+<p class=normal>Depois, copie sobre o arquivo do HiperTools&#174; a .DLL atualizada, no prompt do DOS digite o comando abaixo, que o HiperTools&#174; ser&#225; registrado novamente e estar&#225; pronto para o uso.</p>
+<p class=header>REGSVR32 HIPERTOOLS30.DLL</p>
+<p class=header>Obs: Caso voc&#234; n&#227;o encontre o programa regsvr32.exe no seu disco r&#237;gido, procure no nosso servidor de http://www.hipertools.com.br/ftp</p>
+<p class=heading-5>Configurando um site no servidor IIS: </p>
+<p class=heading-5-p>&nbsp;</p>
+<p class=normal>Recomendamos sempre utilizada um dom&#237;nio virtual para cada projeto que voc&#234; for criar dentro do seu servidor. Desta forma, voc&#234; poder&#225; controlar todos os ambientes, al&#233;m de ter um global.asa diferente para cada projeto.</p>
+<p class=normal>&nbsp;</p>
+<p>
+</body>
+</html>

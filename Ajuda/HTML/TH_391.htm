@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>Método ImportDate</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_390.htm">previous</a> &nbsp; <a href="TH_392.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo ImportDate</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Converte uma <i>String</i> no formato especificado para uma vari&#225;vel do tipo <i>Date</i>.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>ImportDate </b><i>String , Integer</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>String</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String</i></td>
+<td class=footer>Requerido. <i>String</i> com os dados a serem convertidos.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>Integer</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Formato dos dados.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O formato deve ser uma das constantes a seguir:</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.9375in">Constante</td>
+<td class=heading-1 style="width: 0.6875in">Valor</td>
+<td class=heading-1 style="width: 1.875in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=footer style="width: 1.9375in">conDateTypeAAMMDD</td>
+<td class=normal style="width: 0.6875in">0</td>
+<td class=footer style="width: 1.875in">Formato AAMMDD</td>
+</tr>
+<tr>
+<td class=footer>conDateTypeAAAAMMDD</td>
+<td class=normal>1</td>
+<td class=footer>Formato AAAAMMDD</td>
+</tr>
+<tr>
+<td class=footer>conDateTypeMMDDAA</td>
+<td class=normal>2</td>
+<td class=footer>Formato MMDDAA</td>
+</tr>
+<tr>
+<td class=footer>conDateTypeMMDDAAAA</td>
+<td class=normal>3</td>
+<td class=footer>Formato MMDDAAAA</td>
+</tr>
+<tr>
+<td class=footer>conDateTypeDDMMAA</td>
+<td class=normal>4</td>
+<td class=footer>Formato DDMMAA</td>
+</tr>
+<tr>
+<td class=footer style="width: 1.9375in">conDateTypeDDMMAAAA</td>
+<td class=normal style="width: 0.6875in">5</td>
+<td class=footer style="width: 1.875in">Formato DDMMAAAA</td>
+</tr>
+</table>
+</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>ImportDate</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>strData = &#8220;660823&#8221;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Response.Write String.<b>ImportDate</b>(strData, conDateTypeAAMMDD)</p>
+<p class=normal>Retorna: 08/23/66</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>String</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_392.htm"><img src="button.png" border=0></a><a href="TH_392.htm" style="text-decoration:none;">Método ImportMoney</a></p>
+<p>
+</body>
+</html>

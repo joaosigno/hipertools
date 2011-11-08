@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>Objeto Connection</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_37.htm">previous</a> &nbsp; <a href="TH_39.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=objetos>Objeto Connection</p>
+<p class=objetos-p>&nbsp;</p>
+<p class=normal>O objeto <i>Connection</i> visa facilitar o acesso aos banco de dados via ODBC.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Set <i>Connection</i> = Server.CreateObject(&#8220;HiperTools30.Connection&#8221;)</p>
+<p class=normal>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 4.5in">Tipo de Conex&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=heading-1 style="width: 1.67361in">Constante</td>
+<td class=heading-1 style="width: 0.576389in">Valor</td>
+<td class=heading-1 style="width: 2.25in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.67361in">ConConnSQL</td>
+<td class=normal style="width: 0.576389in">1</td>
+<td class=footer style="width: 2.25in">Driver={SQL Server};</table>
+</p>
+<td class=normal>Server=SQLServer;UID=sa;PWD=; Database=Database</td>
+</tr>
+<tr>
+<td class=normal>conConnDBase</td>
+<td class=normal>2</td>
+<td class=normal>Driver={Microsoft dBASE Driver (*.dbf)};</p>
+<p class=normal>DBQ=c:\temp; DriverID=2772</td>
+</tr>
+<tr>
+<td class=normal>conConnAccess</td>
+<td class=normal>3</td>
+<td class=normal>Driver={Microsoft Access Driver (*.mdb)};</p>
+<p class=normal>DBQ=c:\temp\sample.mdb</td>
+</tr>
+<tr>
+<td class=normal>conConnExcel</td>
+<td class=normal>4</td>
+<td class=normal>Driver={Microsoft Excel Driver (*.xls)};</p>
+<p class=normal>DBQ=c:\temp; DriverID=278 (v3.0/4.0)</p>
+<p class=normal>DBQ=c:\temp\sample.xls; DriverID=22 (v.5.0/7.0)</p>
+<p class=normal>DBQ=c:\temp\sample.xls; DriverID=790 (v. 97)</td>
+</tr>
+<tr>
+<td class=normal>conConnFoxPro</td>
+<td class=normal>5</td>
+<td class=normal>Driver={Microsoft FoxPro Driver (*.dbf)};</p>
+<p class=normal>DBQ=c:\temp; DriverID=536</td>
+</tr>
+<tr>
+<td class=normal>conConnText</td>
+<td class=normal>6</td>
+<td class=normal>Driver={Microsoft Text Driver (*.txt;*.csv)};</p>
+<p class=normal>DefaultDir=c:\temp</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">conConnParadox</td>
+<td class=normal style="width: 0.576389in">7</td>
+<td class=normal style="width: 2.25in">Driver={Microsoft Paradox Driver (*.db )};</p>
+<p class=normal>DBQ=c:\temp; DriverID=26</td>
+</tr>
+</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 4.5in">Comandos Dispon&#237;veis para o Connection</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=heading-1 style="width: 1.67361in">Comando</td>
+<td class=heading-1 style="width: 2.82639in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.67361in">DSN</td>
+<td class=footer style="width: 2.82639in">O nome de uma fonte de dados dispon&#237;vel na lista de fontes de dados do ODBC. O comando DSN n&#227;o &#233; utilizado se o comando DRIVER for espec&#237;ficado.</td>
+</tr>
+<tr>
+<td class=normal>DRIVER</td>
+<td class=footer>O nome de um driver dispon&#237;vel na lista de drivers do ODBC. O comando DRIVER n&#227;o &#233; utilizado se o comando DSN for espec&#237;ficado.</td>
+</tr>
+<tr>
+<td class=normal>SERVER</td>
+<td class=footer>O nome de um servidor na rede onde est&#225; instalado o SQL-Server. Em um computador com Microsoft Windows NT, "(local)" pode ser utilizado para indicar a pr&#243;pria m&#225;quina. </td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">UID</td>
+<td class=footer style="width: 2.82639in">A identifica&#231;&#227;o do usu&#225;rio na fonte de dados.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">PWD</td>
+<td class=footer style="width: 2.82639in">A senha do usu&#225;rio para acesso &#224; fonte de dados.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">APP</td>
+<td class=footer style="width: 2.82639in">(Opcional) O nome da aplica&#231;&#227;o que est&#225; abrindo a conex&#227;o.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">WSID</td>
+<td class=footer style="width: 2.82639in">(Opcional) A identifica&#231;&#227;o da esta&#231;&#227;o de trabalho que est&#225; abrindo a conex&#227;o.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">DATABASE</td>
+<td class=footer style="width: 2.82639in">(Opcional) O nome do banco de dados SQL Server.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.67361in">LANGUAGE</td>
+<td class=footer style="width: 2.82639in">(Opcional) O linguagem que dever&#225; ser utilizada.</td>
+</tr>
+</table>
+</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 4.5in">Tipos de Drives para a sua Conex&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=heading-1 style="width: 2.26458in">Constante</td>
+<td class=heading-1 style="width: 0.672917in">Driver ID</td>
+<td class=heading-1 style="width: 1.5625in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=footer style="width: 2.26458in">conConnDriverAccess</td>
+<td class=footer style="width: 0.672917in">25</td>
+<td class=footer style="width: 1.5625in">(Microsoft Access)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">ConConnDriverdBaseIII</td>
+<td class=normal style="width: 0.672917in">21</td>
+<td class=normal style="width: 1.5625in">(dBASE III)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverdBaseIV</td>
+<td class=normal style="width: 0.672917in">277</td>
+<td class=normal style="width: 1.5625in">(dBASE IV)</td>
+</tr>
+<tr>
+<td class=sourcecode style="width: 2.26458in">conConnDriverdBase5</td>
+<td class=normal style="width: 0.672917in">533</td>
+<td class=normal style="width: 1.5625in">(dBASE&nbsp;5.0)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverExcel3</td>
+<td class=normal style="width: 0.672917in">534</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;Excel&nbsp;3.0)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverExcel4</td>
+<td class=normal style="width: 0.672917in">278</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;Excel&nbsp;4.0)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverExcel7</table>
+</p>
+<p class=normal>conConnDriverExcel5</td>
+<td class=normal style="width: 0.672917in">22</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;Excel&nbsp;5.0/7.0)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverExcel97</td>
+<td class=normal style="width: 0.672917in">790</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;Excel&nbsp;97)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverFoxPro20</td>
+<td class=normal style="width: 0.672917in">24</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;FoxPro&nbsp;2.0)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverFoxPro25</td>
+<td class=normal style="width: 0.672917in">280</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;FoxPro&nbsp;2.5)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverFoxPro26</td>
+<td class=normal style="width: 0.672917in">536</td>
+<td class=normal style="width: 1.5625in">(Microsoft&nbsp;FoxPro&nbsp;2.6)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverParadox3</td>
+<td class=normal style="width: 0.672917in">26</td>
+<td class=normal style="width: 1.5625in">(Paradox&nbsp;3.x)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverParadox4</td>
+<td class=normal style="width: 0.672917in">282</td>
+<td class=normal style="width: 1.5625in">(Paradox&nbsp;4.x)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverParadox5</td>
+<td class=normal style="width: 0.672917in">538</td>
+<td class=normal style="width: 1.5625in">(Paradox&nbsp;5.x)</td>
+</tr>
+<tr>
+<td class=normal style="width: 2.26458in">conConnDriverText</td>
+<td class=normal style="width: 0.672917in">27</td>
+<td class=normal style="width: 1.5625in">(Text)</td>
+</tr>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do objeto <b>Connection</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&lt;%@ LANGUAGE="VBSCRIPT" %&gt;</p>
+<p class=normal>&lt;!--#INCLUDE VIRTUAL="/HiperTools/HiperTools30.inc"--&gt;</p>
+<p class=normal>&lt;!--#INCLUDE VIRTUAL="/Objects.inc"--&gt;</p>
+<p class=normal>&lt;%</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM  /Connection.asp</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM  Descricao   : Aplica&#231;&#227;o de teste do objeto "Connection"</p>
+<p class=normal>REM  Cria&#231;&#227;o     : 12:00h 10/03/2000</p>
+<p class=normal>REM  Local       : Bras&#237;lia/DF</p>
+<p class=normal>REM  Versao      : 1.0.0</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Main</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Rotina Principal do Sistema</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub Main</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  MainBody</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Final da Sub Main</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>REM Corpo Principal do sistema</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>Private Sub MainBody</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Default.HTMLBegin</p>
+<p class=normal>  Default.HeadAll "Teste do Objeto Connection"</p>
+<p class=normal>  Default.BodyBegin</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    Connection.CommandTimeout    = 300</p>
+<p class=normal>    Connection.ConnectionTimeout = 300</p>
+<p class=normal>    Connection.ConnectionType    = conConnSQL</p>
+<p class=normal>    Connection.Database          = "SQLDatabase"</p>
+<p class=normal>    Connection.UserID            = "Usuario"</p>
+<p class=normal>    Connection.Password          = "Senha"</p>
+<p class=normal>    Connection.ServerAddress     = "ServidorSQL"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    Show.Message Connection.Connection</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    Connection.Clear</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    Connection.ConnectionType    = conConnAccess</p>
+<p class=normal>    Connection.DBQ               = Initializer.SiteRootDir &amp; _</p>
+<p class=normal>                                   "Data\Databas.mdb"</p>
+<p class=normal>    Connection.DefaultDir        = "c:\temp"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>    Show.Message Connection.Connection</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>  Default.PageFooterDefault</p>
+<p class=normal>  Default.BodyEnd</p>
+<p class=normal>  Default.HTMLEnd</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End Sub</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Final da Sub MainBody</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>REM -------------------------------------------------------------------------</p>
+<p class=normal>REM Fim do Connection.asp</p>
+<p class=normal>REM =========================================================================</p>
+<p class=normal>%&gt;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_39.htm"><img src="button.png" border=0></a><a href="TH_39.htm" style="text-decoration:none;">Propriedade CommandTimeout</a></p>
+<p class=normal><a href="TH_40.htm"><img src="button.png" border=0></a><a href="TH_40.htm" style="text-decoration:none;">Propriedade ConnectionTimeout</a></p>
+<p class=normal><a href="TH_41.htm"><img src="button.png" border=0></a><a href="TH_41.htm" style="text-decoration:none;">Propriedade ConnectionType</a></p>
+<p class=normal><a href="TH_42.htm"><img src="button.png" border=0></a><a href="TH_42.htm" style="text-decoration:none;">Propriedade Database</a></p>
+<p class=normal><a href="TH_43.htm"><img src="button.png" border=0></a><a href="TH_43.htm" style="text-decoration:none;">Propriedade DBQ</a></p>
+<p class=normal><a href="TH_44.htm"><img src="button.png" border=0></a><a href="TH_44.htm" style="text-decoration:none;">Propriedade DefaultDir</a></p>
+<p class=normal><a href="TH_45.htm"><img src="button.png" border=0></a><a href="TH_45.htm" style="text-decoration:none;">Propriedade Password</a></p>
+<p class=normal><a href="TH_46.htm"><img src="button.png" border=0></a><a href="TH_46.htm" style="text-decoration:none;">Propriedade ServerAddress</a></p>
+<p class=normal><a href="TH_47.htm"><img src="button.png" border=0></a><a href="TH_47.htm" style="text-decoration:none;">Propriedade UserID</a></p>
+<p class=normal><a href="TH_587.htm"><img src="button.png" border=0></a><a href="TH_587.htm" style="text-decoration:none;">Método Clear</a></p>
+<p class=normal><a href="TH_588.htm"><img src="button.png" border=0></a><a href="TH_588.htm" style="text-decoration:none;">Método ConnectionString</a></p>
+<p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Método AddImage</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_520.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo AddImage</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Adiciona uma imagem &#224; lista de imagens do TreeView para posterior utiliza&#231;&#227;o nos icones dos itens e n&#243;s adicionados. Estas imagens ser&#227;o utilizadas pelo nome do prefixo.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>AddImage </b><i>String1, String2</i>[<i>, String3, String4, String5</i>]<i></i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>TreeView</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. Prefixo do nome da imagem a ser adicionada.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=footer>Requerido. Caminho URL da imagem.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=footer>Requerido. Sufixo do nome da imagem para quando ela estiver aberta, o valor padr&#227;o &#233; &#8220;Open&#8221;.</td>
+</tr>
+<tr>
+<td class=normal><i>String4</i></td>
+<td class=footer>Requerido. Sufixo do nome da imagem para quando ela estiver aberta, o valor padr&#227;o &#233; &#8220;Close&#8221;.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String5</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Extens&#227;o da item, o valor padr&#227;o &#233; &#8220;.gif&#8221;.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>AddImage</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>TreeView.DefaultImage = "Folder"</p>
+<p class=normal>TreeView.<b>AddImage</b> "Folder", "/HiperTools/Img/Folder/"</p>
+<p class=normal>TreeView.<b>AddImage</b> "User", "/HiperTools/Img/Folder/", "aberto", "fechado"</p>
+<p class=normal>TreeView.BeginTree</p>
+<p class=normal>  TreeView.AddItem "1&#186; item", "ScriptAction.asp?Action=1", , "User"</p>
+<p class=normal>  TreeView.BeginNode "1&#186; n&#243;", "ScriptAction.asp?Action=2"</p>
+<p class=normal>    TreeView.AddItem "1&#186; item", "ScriptAction.asp?Action=3"</p>
+<p class=normal>    TreeView.AddSubCaption "SubT&#237;tulo", "ScriptAction.asp?Action=4"</p>
+<p class=normal>  TreeView.EndNode</p>
+<p class=normal>TreeView.EndTree</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>TreeView.</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p>
+</body>
+</html>

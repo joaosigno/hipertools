@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Método SetFocusOnClient</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_585.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo SetFocusOnClient </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>M&#233;todo que implementa no cliente, o Browser, um c&#243;digo em JavaScript que posiciona o cursor no campo definido.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>SetFocusOnClient</b> <i>String</i></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1in">Parte</td>
+<td class=heading-1 style="width: 3.5in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1in"><i>Objeto</i></td>
+<td class=footer style="width: 3.5in">Requerido. Sempre ter&#225; que ser um objeto <i>Validate</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1in"><i>String</i></td>
+<td class=footer style="width: 3.5in">Requerido. Nome do campo definido com algum m&#233;todo do objeto Form &#8211; Form.FormInput, Form.Form.Text, etc.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>SetFocusOnClient</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Form.BeginForm&nbsp;"meuApp.asp?O=XY",&nbsp;"frmFields",&nbsp;,&nbsp;,&nbsp;"vldFields()"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Show.HTML&nbsp;"Senha:"</p>
+<p class=preformatted>Form.Text&nbsp;"txtSenha",&nbsp;8,&nbsp;,8&nbsp;'Maxlenght&nbsp;8</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Validate.<b>SetFocusOnClient</b>&nbsp;"txtSenha"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.Hidden&nbsp;"hidSenha",&nbsp;"1234567"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.Submit&nbsp;"btnSubmit",&nbsp;"Enviar"</p>
+<p class=preformatted>Validate.CompareFieldsOnClient&nbsp;"txtSenha",&nbsp;"hidSenha",&nbsp;"frmFields",&nbsp;"vldFields",&nbsp;"Senha&nbsp;inv&#225;lida"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Validate</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p>
+</body>
+</html>

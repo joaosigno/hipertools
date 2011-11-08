@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Método BeginForm</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_241.htm">previous</a> &nbsp; <a href="TH_243.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo BeginForm</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Inicia um formul&#225;rio.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>BeginForm </b><i>String1 </i>[<i>, String2</i>]<i> </i>[<i>, String3</i>]<i> </i>[<i>, String4</i>]<i> </i>[<i>, String5</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Form</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. Endere&#231;o para o qual o formul&#225;rio ser&#225; submetido.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=footer>Opcional. Nome do formul&#225;rio.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=footer>Opcional. M&#233;todo de submiss&#227;o do formul&#225;rio. O m&#233;todo padr&#227;o &#233; <i>post</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String4</i></td>
+<td class=footer>Opcional. Nome da janela ou frame para o qual submeter o formul&#225;rio.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String5</i></td>
+<td class=footer style="width: 3.41667in">Opcional. C&#243;digo JavaScript a ser executado imediatamente antes do formul&#225;rio ser submetido.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>BeginForm</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form.<b>BeginForm</b> Initializer.ScriptName, "frmEnviar", , ,"return ValidateField()"</p>
+<p class=normal>Retorna: &lt;FORM ACTION=&#8221;Script.ASP&#8221; NAME=&#8221;frmEnviar&#8221; METHOD=&#8221;POST&#8221; onSubmit=&#8221;return ValidateField()&#8221;&gt;</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Hidden "Campo Escondido", "Valor do campo"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.FormInput<b> </b>"SUBMIT", "bmtEnvia", "Emitir"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.Submit<b> </b>"bmtEnvia", "Emitir"</p>
+<p class=normal>Form.Reset<b> </b>"Limpar"</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Form.EndForm</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Form</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_243.htm"><img src="button.png" border=0></a><a href="TH_243.htm" style="text-decoration:none;">Método BeginSelect</a></p>
+<p>
+</body>
+</html>

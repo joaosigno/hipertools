@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Método Equal</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_555.htm">previous</a> &nbsp; <a href="TH_557.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo Equal</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna um parametro completo para a cria&#231;&#227;o de uma QueryString.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Equal </b>( <i>String1 </i>, <i>String2</i> )</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.60417in">Descri&#231;&#227;o</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.60417in">Requerido. Sempre ter&#225; que ser um objeto <i>URL</i>.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=footer>Requerido. <i>String1</i> &#233; a op&#231;&#227;o do QueryString. Opcao=.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String2</i></td>
+<td class=footer style="width: 3.60417in"><i>String2</i> &#233; o parametro da op&#231;&#227;o do QueryString. =parametro.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>Equal</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>URL.BeginURL Initializer.ScriptName</p>
+<p class=normal>URL.Add efQueryStrAction, efQSActionSummary</p>
+<p class=normal>URL.Add efQueryStrWhat, conWhatChamaTecnico</p>
+<p class=normal>URL.Show<b> </b>"Relat&#243;rio por Setor", URL.<b>Equal</b>(efQueryStrList, 1)</p>
+<p class=normal>Show.BR</p>
+<p class=normal>Response.Write URL.GetURL "Relat&#243;rio por Usu&#225;rio", URL.<b>Equal</b>(efQueryStrList, 2)</p>
+<p class=normal>Show.BR</p>
+<p class=normal>URL.EndURL</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>URL</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_557.htm"><img src="button.png" border=0></a><a href="TH_557.htm" style="text-decoration:none;">Método GetURL</a></p>
+<p>
+</body>
+</html>

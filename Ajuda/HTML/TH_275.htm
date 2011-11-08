@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Objeto Pack</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_274.htm">previous</a> &nbsp; <a href="TH_276.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=objetos>Objeto Pack</p>
+<p class=objetos-p>&nbsp;</p>
+<p class=normal>Esse objeto consiste em uma <i>Collection</i> que suporta a cria&#231;&#227;o, armazenamento e acesso de pares chave/valor na mem&#243;ria. Cada item num objeto Pack &#233; um <i>PackItem</i>, que atrav&#233;s da propriedade <i>Value</i> permite armazenar uma vari&#225;vel do tipo <i>Variant</i>. Pode-se adicionar qualquer tipo de dado ao Pack, inclusive outro Pack ou outros objetos. Al&#233;m disso, cada item de um Pack possui uma propriedade Pack que automaticamente cria outro Pack dentro do Pack instanciado.</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilusta como instanciar  o <i>Pack</i> e utilizar suas propriedades e m&#233;todos. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>&lt;%@&nbsp;LANGUAGE="VBSCRIPT"&nbsp;%&gt;</p>
+<p class=preformatted>&lt;%</p>
+<p class=preformatted>Dim&nbsp;Pack,&nbsp;item,&nbsp;InnerPack</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Set&nbsp;Pack&nbsp;&nbsp;&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Pack")</p>
+<p class=preformatted>Set&nbsp;InnerPack&nbsp;=&nbsp;Server.CreateObject("HiperTools30.Pack")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Add&nbsp;"Driver",&nbsp;"{SQL&nbsp;Server&nbsp;Driver}"</p>
+<p class=preformatted>Pack.Add&nbsp;"Server",&nbsp;"MyServer"</p>
+<p class=preformatted>Pack.Add&nbsp;"UserID",&nbsp;"sa"</p>
+<p class=preformatted>Pack.Add&nbsp;"PWD",&nbsp;"sqlserver"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>InnerPack.Add&nbsp;"Table0",&nbsp;"Pedidos"</p>
+<p class=preformatted>InnerPack.Add&nbsp;"Table1",&nbsp;"IPedidos"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>REM&nbsp;Adicionando&nbsp;um&nbsp;Pack&nbsp;como&nbsp;valor&nbsp;de&nbsp;um&nbsp;Pack</p>
+<p class=preformatted>Pack.Add&nbsp;"Innerpack",&nbsp;InnerPack</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack("Innerpack").Value.Add&nbsp;"Table2",&nbsp;"Compras"</p>
+<p class=preformatted>Pack("Innerpack").Value.Add&nbsp;"ParentPack",&nbsp;Pack</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>REM&nbsp;Utilizado&nbsp;o&nbsp;Pack&nbsp;do&nbsp;PackItem</p>
+<p class=preformatted>Pack("Table2").Pack.Add&nbsp;"Field0",&nbsp;"Codigo"</p>
+<p class=preformatted>Pack("Table2").Pack.Add&nbsp;"Field1",&nbsp;"Pedido"</p>
+<p class=preformatted>Pack("Table2").Pack.Add&nbsp;"Field2",&nbsp;"Data"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack("Table2").Pack("Field1").Pack.Add&nbsp;"Value0",&nbsp;0</p>
+<p class=preformatted>Pack("Table2").Pack("Field1").Pack.Add&nbsp;"Value1",&nbsp;1</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack("Table2").Pack.Count</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack("Table2").Pack("Field1").Pack.Count</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>For&nbsp;Each&nbsp;item&nbsp;In&nbsp;Pack("Innerpack").Value</p>
+<p class=preformatted>&nbsp;&nbsp;If&nbsp;Not&nbsp;IsObject(item.Value)&nbsp;Then&nbsp;Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;item.Value</p>
+<p class=preformatted>Next</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;&nbsp;Pack("Innerpack")("Table2")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>If&nbsp;Pack.Find("Table0")&nbsp;Then</p>
+<p class=preformatted>&nbsp;&nbsp;Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Item("Table0").Value</p>
+<p class=preformatted>&nbsp;&nbsp;Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Item(1).Value</p>
+<p class=preformatted>&nbsp;&nbsp;Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Item(2).Value</p>
+<p class=preformatted>Else</p>
+<p class=preformatted>&nbsp;&nbsp;Response.Write&nbsp;"N&#227;o&nbsp;existe&nbsp;o&nbsp;item&nbsp;""Table0"""</p>
+<p class=preformatted>End&nbsp;If</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack("Table1").Value</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Value("Table1")</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Key("Table1")</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack("Table1").Key</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;"============"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Item(2).Value&nbsp;=&nbsp;"PedidosAlt"</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Item(2).Value</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack(2).Value&nbsp;=&nbsp;"PedidosAlterado"</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack(2).Value</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Value(2)&nbsp;=&nbsp;"PedidosAltDeNovo"</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Item(2).Value</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack(2).Value&nbsp;=&nbsp;"PedidosAlteradoDeNovo"</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack(2)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack("Table1")&nbsp;=&nbsp;"Pedidos"</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack("Table1")</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;"============"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>For&nbsp;Each&nbsp;item&nbsp;In&nbsp;Pack</p>
+<p class=preformatted>&nbsp;&nbsp;Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;item.Key</p>
+<p class=preformatted>Next</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack.Clear</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>REM&nbsp;Aqui&nbsp;ele&nbsp;destroi&nbsp;todos&nbsp;os&nbsp;pack&nbsp;"filhos"</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.Count</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Set&nbsp;Pack&nbsp;=&nbsp;Nothing</p>
+<p class=preformatted>Set&nbsp;InnerPack&nbsp;=&nbsp;Nothing</p>
+<p class=preformatted>%&gt;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_276.htm"><img src="button.png" border=0></a><a href="TH_276.htm" style="text-decoration:none;">Propriedade Count</a></p>
+<p class=normal><a href="TH_277.htm"><img src="button.png" border=0></a><a href="TH_277.htm" style="text-decoration:none;">Propriedade Item</a></p>
+<p class=normal><a href="TH_278.htm"><img src="button.png" border=0></a><a href="TH_278.htm" style="text-decoration:none;">Método Add</a></p>
+<p class=normal><a href="TH_279.htm"><img src="button.png" border=0></a><a href="TH_279.htm" style="text-decoration:none;">Método Find</a></p>
+<p class=normal><a href="TH_280.htm"><img src="button.png" border=0></a><a href="TH_280.htm" style="text-decoration:none;">Método Remove</a></p>
+<p>
+</body>
+</html>

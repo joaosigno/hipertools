@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Método FieldMask</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_196.htm">previous</a> &nbsp; <a href="TH_198.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo FieldMask</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define a m&#225;scara a ser aplicada em um campo durante as apresenta&#231;&#245;es. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>FieldMask </b><i>String1, String2, </i>[<i>String3</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome do campo j&#225; criado utilizando o AddField.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. M&#225;scara que ser&#225; utilizada na apresenta&#231;&#227;o de um campo espec&#237;fico.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String3</i></td>
+<td class=normal style="width: 3.41667in">Opcional. Complemento da m&#225;scara. &#201; o que ser&#225; apresentado caso n&#227;o exista a posi&#231;&#227;o definida &#8211; veja os coment&#225;rios abaixo.</td>
+</tr>
+</table>
+</p>
+<p class=sintax>&nbsp;</p>
+<p class=sintax-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>A seguinte sintaxe se aplica &#224; m&#225;scara:</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in"> Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=footer style="width: 1.08333in">"0"</td>
+<td class=footer style="width: 3.41667in">Valida esta posi&#231;&#227;o como um n&#250;mero, se a posi&#231;&#227;o estiver vazia ou inv&#225;lida ele &#233; preechido com o complemento da m&#225;scara.</td>
+</tr>
+<tr>
+<td class=normal>"A"</td>
+<td class=normal>Valida esta posi&#231;&#227;o como um caracter alfab&#233;tico (entre A e Z, ou a e z), se a posi&#231;&#227;o estiver vazia ou inv&#225;lida ele &#233; preechido com o complemento da m&#225;scara</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>literal</i><i></i></td>
+<td class=normal style="width: 3.41667in">Preenche esta posi&#231;&#227;o com o que for passado.</td>
+</tr>
+</table>
+</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>FieldMask</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtCodigo",&nbsp;"&amp;C&#243;digo",&nbsp;&nbsp;efFldTypeText,&nbsp;,&nbsp;,&nbsp;efNext</p>
+<p class=preformatted>Edit.<b>FieldMask</b>&nbsp;"chtCodigo",&nbsp;"00/00",&nbsp;"0"</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>AddField, DataAddField, String.Mask</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_198.htm"><img src="button.png" border=0></a><a href="TH_198.htm" style="text-decoration:none;">Método FieldShowSize</a></p>
+<p>
+</body>
+</html>

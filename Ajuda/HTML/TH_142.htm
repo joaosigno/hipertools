@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Propriedade Errors</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_141.htm">previous</a> &nbsp; <a href="TH_143.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Errors</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Retorna uma refer&#234;ncia para uma cole&#231;&#227;o do tipo &#8220;ADODB.Errors&#8221; com todos os erros que ocorreram no momento. Veja a documenta&#231;&#227;o padr&#227;o do ADO. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>objeto.<b>Errors </b></p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=body-text-indent-3>O argumento objeto sempre ser&#225; o objeto EditForm. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso da propriedade <b>Errors</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Dim objErrors, objError</p>
+<p class=normal>Set objErrors = Server.CreateObject("ADODB.Errors")</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Edit.DebugMode = True</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>' Defini&#231;&#227;o dos dados...</p>
+<p class=normal>.</p>
+<p class=normal>.</p>
+<p class=normal>.</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>If Edit.<b>Errors</b>.Count &gt; 0 Then</p>
+<p class=normal>  Set objErrors = Edit.<b>Errors</b></p>
+<p class=normal>  </p>
+<p class=normal>  For Each objError In objErrors</p>
+<p class=normal>    Response.Write objError.Number &amp; "  " &amp; objError.Description</p>
+<p class=normal>  Next</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>End If</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>ShowSQLQuery, DebugMode</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_143.htm"><img src="button.png" border=0></a><a href="TH_143.htm" style="text-decoration:none;">Propriedade FirstPageLink</a></p>
+<p>
+</body>
+</html>

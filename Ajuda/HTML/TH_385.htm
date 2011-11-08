@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Método FormatPhone</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_384.htm">previous</a> &nbsp; <a href="TH_386.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo FormatPhone </p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Retorna uma <i>String</i> formatada como telefone. O formato depender&#225; da quantidade de caracteres do par&#226;metro.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>FormatPhone </b><i>String</i><b></b></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.27986in">Parte</td>
+<td class=heading-1 style="width: 3.22014in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.27986in"><i>Objeto</i></td>
+<td class=footer style="width: 3.22014in">Requerido. Sempre ter&#225; que ser um objeto <i>String</i>.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.27986in"><i>String</i></td>
+<td class=footer style="width: 3.22014in">Requerido. <i>String, </i>que ser&#225; formatada como telefone.</td>
+</tr>
+</table>
+<p class=header>&nbsp;</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.27986in">Tamanho</td>
+<td class=heading-1 style="width: 3.22014in">Formato</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=footer style="width: 1.27986in">7</td>
+<td class=footer style="width: 3.22014in">###-####</td>
+</tr>
+<tr>
+<td class=normal>8</td>
+<td class=footer>####-####</td>
+</tr>
+<tr>
+<td class=normal>9</td>
+<td class=footer>(0_##) ###-####</td>
+</tr>
+<tr>
+<td class=normal>10</td>
+<td class=footer>(###) ###-####</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.27986in">11</td>
+<td class=footer style="width: 3.22014in">(###) ####-####</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>FormatPhone</b>.</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>strValorA = String.<b>FormatPhone</b>(&#8220;123 1234&#8221;)</p>
+<p class=normal>Retorna: 123-1234</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>strValorA = String.<b>FormatPhone</b>(&#8220;1231 2345&#8221;)</p>
+<p class=normal>Retorna: 1231-2345</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>strValorA = String.<b>FormatPhone</b>(&#8220;(12) 3123456&#8221;)</p>
+<p class=normal>Retorna: (0_12) 312-3456</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>strValorA = String.<b>FormatPhone</b>(&#8220;(123) 1234567&#8221;)</p>
+<p class=normal>Retorna: (123) 123-4567</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>strValorA = String.<b>FormatPhone</b>(&#8220;123 1234 5678&#8221;)</p>
+<p class=normal>Retorna: (123) 1234-5678</p>
+<p class=normal>&nbsp;</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>String</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_386.htm"><img src="button.png" border=0></a><a href="TH_386.htm" style="text-decoration:none;">Método GetPiece</a></p>
+<p>
+</body>
+</html>

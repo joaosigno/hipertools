@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Método EndCell</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_438.htm">previous</a> &nbsp; <a href="TH_440.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo EndCell</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Finaliza uma c&#233;lula da tabela.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>EndCell</b></p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto <i>Table.</i></td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>EndCell</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Table.Padding = 4</p>
+<p class=normal>Table.Spacing = 0</p>
+<p class=normal>Table.BeginTable "65%", ,2 ,True</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Table.CellColSpan = 2</p>
+<p class=normal>Table.BeginRow 3, True</p>
+<p class=normal>Table.Cell "Painel de Controle"</p>
+<p class=normal>Table.EndRow</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Table.BeginRow 2</p>
+<p class=normal>Table.BeginCell</p>
+<p class=normal>URL.BeginURL Initializer.ScriptName</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>URL.Add efQueryStrAction, efQSActionEditor</p>
+<p class=normal>URL.Add efQueryStrWhat, conWhatChamaTecnico</p>
+<p class=normal>URL.Show "Chamado T&#233;cnico", efQueryStrEditableStr</p>
+<p class=normal>Show.BR</p>
+<p class=normal>URL.EndURL</p>
+<p class=normal>Table.<b>EndCell</b></p>
+<p class=normal>Table.EndRow</p>
+<p class=normal>Table.EndTable</p>
+<p class=footer>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Table</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_440.htm"><img src="button.png" border=0></a><a href="TH_440.htm" style="text-decoration:none;">Método EndRow</a></p>
+<p>
+</body>
+</html>

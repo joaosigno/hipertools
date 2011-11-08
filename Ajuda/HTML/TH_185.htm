@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Método AddFilter</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_184.htm">previous</a> &nbsp; <a href="TH_186.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo AddFilter</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Adiciona um filtro &#224; apresenta&#231;&#227;o (em listagem, e na navega&#231;&#227;o) da tabela tabela, este filtro funciona internamente diferente do filtro passado via QueryString com o par&#226;metro efQueryStrFilter. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>AddFilter </b><i>String1, String2</i>, [<i>String3</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome da coluna que ser&#225; aplicada o filtro</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. Valor que ser&#225; utilizado no filtro.</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String3</i></td>
+<td class=normal style="width: 3.41667in">&#210;pcional. String contendo o operador a ser utilizado. Ex.: &#8220;&lt;&gt;&#8221;, &#8220;LIKE&#8221;. O padr&#227;o &#233; &#8220;=&#8221;.</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>AddFilter</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Edit.AddFilter "chtCodigo", "5"</p>
+<p class=normal>Edit.AddFilter "chtCodigo", "1"</p>
+<p class=normal>Edit.AddFilter "chtCodigo", "25", "&lt;&gt;"</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>BeginForm, EndForm,  &#8220;Constantes QueryString Parameters &#8211; efQueryStrFilter&#8221;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_186.htm"><img src="button.png" border=0></a><a href="TH_186.htm" style="text-decoration:none;">Método AddHeader</a></p>
+<p>
+</body>
+</html>

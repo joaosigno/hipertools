@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Propriedade Item</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_276.htm">previous</a> &nbsp; <a href="TH_278.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>Propriedade Item</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Retorna a refer&#234;ncia a um item adicionado ao Pack. Essa &#233; a propriedade padr&#227;o do objeto Pack e &#233; <i>read-only</i>.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>Item</b>(<i>Variant</i>)</p>
+<p class=normal>ou</p>
+<p class=normal><i>objeto</i>(<i>Variant</i>)</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.64167in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>objeto</i></td>
+<td class=footer style="width: 3.64167in">Requerido. Sempre ter&#225; que ser um objeto Pack.</td>
+</tr>
+<tr>
+<td class=heading-2 style="width: 1.08333in">Variant</td>
+</td>
+<td class=footer style="width: 3.64167in">Requerido. &#205;ndice ou chave do item.</td>
+</tr>
+</table>
+</p>
+<p class=heading-1>Coment&#225;rio</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso da propriedade <b>Item</b>.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Pack.Add&nbsp;"Table0",&nbsp;"Pedidos"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack("Table0")&nbsp;=&nbsp;"PedidosAlt"</p>
+<p class=preformatted>Pack.<b>Item</b>(1).Value&nbsp;=&nbsp;"PedidosAlt"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack.<b>Item</b>(1).Value</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;&lt;BR&gt;PedidosAlt</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Pack(1).Value&nbsp;=&nbsp;"PedidosAlterado"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack(1).Value</p>
+<p class=preformatted>Response.Write&nbsp;"&lt;BR&gt;"&nbsp;&amp;&nbsp;Pack(&#8220;Table0&#8221;)</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Retorna:&nbsp;&lt;BR&gt;PedidosAlterado</p>
+<p class=preformatted>&nbsp;</p><p class=preformatted-tab1>&nbsp;&nbsp;&lt;BR&gt;PedidosAlterado</p><p class=preformatted-tab2>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Pack</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>PackItem.Value, PackItem.Pack</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_278.htm"><img src="button.png" border=0></a><a href="TH_278.htm" style="text-decoration:none;">Método Add</a></p>
+<p>
+</body>
+</html>

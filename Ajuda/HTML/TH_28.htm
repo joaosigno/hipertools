@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Método IncLine</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_27.htm">previous</a> &nbsp; next</p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=propriedades>M&#233;todo IncLine</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Incrementa o contador de linhas apresentadas pelo objeto Browse. Esse m&#233;todo deve ser chamado sempre que for avan&#231;ado um registro.</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>objeto.<b>IncLine</b></p>
+<p class=normal>O argumento objeto sempre ser&#225; o objeto Browse. </p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>IncLine</b>. </p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Browse.Current = "MyBrowse"</p>
+<p class=normal>Browse.PageSize = 10</p>
+<p class=normal>Browse.Recordset =  sobjRS</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Table.BeginTable "400", "Listagem", 3, True</p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Do Until (sobjRS.EOF Or Browse.EndOfPage)</p>
+<p class=normal>  Table.BeginRow 2</p>
+<p class=normal>  Table.Column sobjRS("Nome")</p>
+<p class=normal>  Table.Column sobjRS("Endereco")</p>
+<p class=normal>  Table.Column sobjRS("Telefone")</p>
+<p class=normal>  Table.EndRow</p>
+<p class=normal>  sobjRS.MoveNext</p>
+<p class=normal>  Browse.<b>IncLine</b></p>
+<p class=normal>&nbsp;</p>
+<p class=normal>Loop</p>
+<p class=normal>Browse.Status = True</p>
+<p class=normal>Browse.Bar</p>
+<p class=normal>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>Browse</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal>&nbsp;</p>
+<p>
+</body>
+</html>

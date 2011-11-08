@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Método FieldLookupFilter</title>
+<link rel="stylesheet" href="HiperTools.css" type="text/css">
+<style type="text/css">
+ p { margin-top: 0; margin-bottom: 0; }
+</style>
+<script language="JavaScript" src="TrueHelp.js"></script>
+</head>
+<body onload="thload()">
+<div id=ienav>
+<ilayer id=nsnav>
+<br>
+<center>
+<p class=normal><a href="HiperTools30-toc.htm" target="left">contents</a> &nbsp; <a href="HiperTools30-index.htm" target="left">index</a> &nbsp; <a href="TH_205.htm">previous</a> &nbsp; <a href="TH_207.htm">next</a></p>
+</center>
+<br>
+<hr noshade size=1>
+</ilayer>
+</div>
+<p class=metodos>M&#233;todo FieldLookupFilter</p>
+<p class=metodos-p>&nbsp;</p>
+<p class=heading-1>Descri&#231;&#227;o</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>Define um filtro que limitar&#225; a lista gerada por um lookup. Este filtro pode ser fixo ou relacionado &#224; outra tabela, definida com o FieldLookup.</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Sintaxe</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=normal><i>objeto</i>.<b>FieldLookupFilter</b> <i>String1</i>, <i>String2</i>,<i> </i>[<i>String3</i>],<i> </i>[<i>String4</i>],<i> </i>[<i>String5</i>],<i> </i>[<i>String6</i>]</p>
+<table cellpadding=0>
+<tr>
+<td class=heading-1 style="width: 1.08333in">Parte</td>
+<td class=heading-1 style="width: 3.41667in">Descri&#231;&#227;o</td>
+<td class=normal><b></tr>
+</b><tr>
+<td class=normal style="width: 1.08333in"><i>Objeto</i></td>
+<td class=footer style="width: 3.41667in">Requerido. Sempre ter&#225; que ser um objeto EditForm.</td>
+</tr>
+<tr>
+<td class=normal><i>String1</i></td>
+<td class=normal>Requerido. Nome do campo criado utilizando AddField.</td>
+</tr>
+<tr>
+<td class=normal><i>String2</i></td>
+<td class=normal>Requerido. Nome do campo de filtro que ser&#225; comparado com um valor fixo (<i>String4</i>) ou de outro campo (<i>String3</i>) &#8211; opcionalmente de outra tabela.</td>
+</tr>
+<tr>
+<td class=normal><i>String3</i></td>
+<td class=normal>Opcional. Nome do campo a ser comparado com o campo de  filtro (<i>String2</i>). Pode ser um campo da tabela de lookup definida no FieldLookup. Se este par&#226;metro for passado o pr&#243;ximo par&#226;metro (<i>String4</i>) &#233; ignorado.</td>
+</tr>
+<tr>
+<td class=normal><i>String4</i></td>
+<td class=normal>Opcional. Valor a ser comparado ao campo de filtro (<i>String2</i>).</td>
+</tr>
+<tr>
+<td class=normal style="width: 1.08333in"><i>String5</i></td>
+<td class=normal style="width: 3.41667in">Opcional. Tipo de dado do campo a ser comparado (<i>String3</i>) ou do valor a ser comparado (<i>String4</i>).</td>
+</tr>
+</table>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Coment&#225;rios</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>O c&#243;digo abaixo ilustra o uso do m&#233;todo <b>FieldLookupFilter</b>. </p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Exemplo</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=preformatted>Edit.AddField&nbsp;"chtSetor",&nbsp;"S&amp;etor",&nbsp;efFldTypeLookUp</p>
+<p class=preformatted>Edit.FieldLookUp&nbsp;"chtSetor",&nbsp;"chaSetores",&nbsp;"steCodigo",&nbsp;"steDescricao"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>'Aqui&nbsp;ele&nbsp;filtrar&#225;&nbsp;o&nbsp;Lookup&nbsp;definido&nbsp;acima,&nbsp;para&nbsp;os&nbsp;Setores&nbsp;que&nbsp;se&nbsp;'relacionam&nbsp;com&nbsp;clientes&nbsp;desta&nbsp;mesma&nbsp;tabela,&nbsp;no&nbsp;caso&nbsp;Chamados&nbsp;T&#233;cnicos.&nbsp;'Veja&nbsp;o&nbsp;exemplo&nbsp;no&nbsp;in&#237;cio.</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.<b>FieldLookupFilter</b>&nbsp;"chtSetor",&nbsp;"chtCliente",&nbsp;"steCliente"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>'ou&nbsp;</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>'Aqui&nbsp;ele&nbsp;filtrar&#225;&nbsp;o&nbsp;mesmo&nbsp;Lookup&nbsp;para&nbsp;os&nbsp;Setores&nbsp;que&nbsp;cliente&nbsp;de&nbsp;c&#243;digo&nbsp;&nbsp;&nbsp;&nbsp;'"20"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=preformatted>Edit.<b>FieldLookupFilter</b>&nbsp;"chtSetor",&nbsp;"chtCliente",&nbsp;,&nbsp;"20"</p>
+<p class=preformatted>&nbsp;</p>
+<p class=body-text-indent-3>&nbsp;</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Aplica-se </p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>EditForm</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<p class=heading-1>Veja tamb&#233;m</p>
+<p class=heading-1-p>&nbsp;</p>
+<p class=body-text-indent-3>FieldLookUp, AddField, DataAddField</p>
+<p class=body-text-indent-3-p>&nbsp;</p>
+<hr noshade size=1>
+<p class=normal><a href="TH_207.htm"><img src="button.png" border=0></a><a href="TH_207.htm" style="text-decoration:none;">Método FieldDoubleValidate</a></p>
+<p>
+</body>
+</html>
